@@ -31,7 +31,7 @@ export default function MainHeader() {
                 <Link href="/" className="flex items-center gap-2">
                     <div className="flex h-12 w-12 items-center justify-center rounded-md border border-sky-400/60 bg-sky-500/15">
                         <Image
-                            src="docs/logo-pack/logo_250px.png"
+                            src="/docs/logo-pack/logo_250px.png"
                             alt="vPLAAF logo"
                             width={40}
                             height={40}

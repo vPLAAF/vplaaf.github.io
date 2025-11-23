@@ -9,7 +9,7 @@ export default function HomePage() {
             {/* 背景图片层 */}
             <div
                 className="absolute inset-0 z-0 bg-cover bg-center"
-                style={{ backgroundImage: "url('imgs/bg.jpg')" }}
+                style={{ backgroundImage: "url('/imgs/bg.jpg')" }}
             >
 
                 {/* 模糊遮罩 */}
