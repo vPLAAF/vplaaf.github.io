@@ -52,7 +52,7 @@ export default function MainHeader() {
                     <Button
                         variant="ghost"
                         size="sm"
-                        className="h-full rounded-md px-4 text-sm text-slate-200 hover:bg-slate-400/80 hover:text-sky-300"
+                        className="h-full rounded-md px-4 text-sm text-slate-200 hover:bg-slate-800/80 hover:text-sky-300"
                     >
                         主页
                     </Button>
@@ -60,7 +60,7 @@ export default function MainHeader() {
                     <Button
                         variant="ghost"
                         size="sm"
-                        className="h-full rounded-md px-4 text-sm text-slate-200 hover:bg-slate-400/80 hover:text-sky-300"
+                        className="h-full rounded-md px-4 text-sm text-slate-200 hover:bg-slate-800/80 hover:text-sky-300"
                     >
                         成员
                     </Button>
@@ -68,7 +68,7 @@ export default function MainHeader() {
                     <Button
                         variant="ghost"
                         size="sm"
-                        className="h-full rounded-md px-4 text-sm text-slate-200 hover:bg-slate-400/80 hover:text-sky-300"
+                        className="h-full rounded-md px-4 text-sm text-slate-200 hover:bg-slate-800/80 hover:text-sky-300"
                     >
                         加入
                     </Button>
@@ -79,7 +79,7 @@ export default function MainHeader() {
                             <Button
                                 variant="ghost"
                                 size="sm"
-                                className="h-full rounded-md px-4 text-sm text-slate-200 hover:bg-slate-400/80 hover:text-sky-300 inline-flex items-center gap-1"
+                                className="h-full rounded-md px-4 text-sm text-slate-200 hover:bg-slate-800/80 hover:text-sky-300 inline-flex items-center gap-1"
                             >
                                 关于
                                 <span className="text-[10px]">▾</span>
@@ -89,20 +89,20 @@ export default function MainHeader() {
                             align="end"
                             className="min-w-[180px] border-slate-800 bg-slate-950 text-sm text-slate-200"
                         >
-                            <DropdownMenuItem className="text-slate-200 hover:bg-slate-400/80">
+                            <DropdownMenuItem className="text-slate-200 hover:bg-slate-800/80">
                                 关于我们
                             </DropdownMenuItem>
-                            <DropdownMenuItem className="text-slate-200 hover:bg-slate-400/80">
+                            <DropdownMenuItem className="text-slate-200 hover:bg-slate-800/80">
                                 职员
                             </DropdownMenuItem>
-                            <DropdownMenuItem className="text-slate-200 hover:bg-slate-400/80">
+                            <DropdownMenuItem className="text-slate-200 hover:bg-slate-800/80">
                                 标准程序
                             </DropdownMenuItem>
-                            <DropdownMenuItem className="text-slate-200 hover:bg-slate-400/80">
+                            <DropdownMenuItem className="text-slate-200 hover:bg-slate-800/80">
                                 协议
                             </DropdownMenuItem>
                             <DropdownMenuSeparator className="bg-slate-800" />
-                            <DropdownMenuItem className="text-slate-300 hover:bg-slate-400/80">
+                            <DropdownMenuItem className="text-slate-300 hover:bg-slate-800/80">
                                 隐私政策
                             </DropdownMenuItem>
                         </DropdownMenuContent>

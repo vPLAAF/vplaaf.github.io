@@ -2,6 +2,8 @@
 
 import MainHeader from "@/components/layout/MainHeader";
 import MainFooter from "@/components/layout/MainFooter";
+import Link from "next/link";
+import {Button} from "@/components/ui/button";
 
 export default function HomePage() {
     return (
@@ -29,7 +31,7 @@ export default function HomePage() {
                     <section className="flex flex-1 items-center">
                         <div className="max-w-2xl space-y-6 rounded-2xl bg-slate-950/40 p-6 shadow-[0_0_80px_rgba(15,23,42,0.85)] ring-1 ring-slate-800/70">
                             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-sky-300">
-                                VATSIM SECIAL OPERATIONS AFFILIATE (APPLYING)
+                                VATSIM SPECIAL OPERATIONS AFFILIATE (APPLYING)
                             </p>
 
                             <h1 className="text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl">
@@ -41,6 +43,37 @@ export default function HomePage() {
                                 当前网站处于建造阶段，
                                 成员系统、招募页面、标准作业程序等内容正在逐步完善中。
                             </p>
+
+                            {/* 加入我们按钮 */}
+                            {/* 按钮组：居中，预留以后加更多按钮 */}
+                            <div className="mt-6 flex justify-center gap-4">
+                                <Link href="/join">
+                                    <Button
+                                        className="
+                                            rounded-lg
+                                            bg-sky-500/90
+                                            hover:bg-sky-400
+                                            text-white
+                                            px-6
+                                            py-2
+                                            text-sm
+                                            font-medium
+                                            transform
+                                            transition
+                                            duration-200
+                                            ease-out
+                                            hover:scale-105
+                                            hover:-translate-y-[1px]
+                                            hover:shadow-[0_0_30px_rgba(56,189,248,0.7)]
+                                            animate-pulse-glow
+      "
+                                    >
+                                        加入我们
+                                    </Button>
+                                </Link>
+                            </div>
+
+
                         </div>
                     </section>
 
