@@ -29,15 +29,16 @@ export default function MainHeader() {
             <div className="mx-auto flex h-20 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
                 {/* 左侧 Logo */}
                 <Link href="/" className="flex items-center gap-2">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-md border border-sky-400/60 bg-sky-500/15">
-                        <Image
+                    <div className="flex h-12 w-12 items-center text-[9px] justify-center rounded-md border border-sky-400/60 bg-sky-500/15">
+{/*                        <Image
                             src="/docs/logo-pack/logo_250px.png"
                             alt="vPLAAF logo"
                             width={40}
                             height={40}
                             className="rounded-md border border-slate-700 object-contain"
                             priority
-                        />
+                        />*/}
+                        BLH我的LOGO呢
                     </div>
                     <div className="leading-tight">
                         <div className="text-[14px] font-semibold tracking-[0.25em] text-sky-300">
@@ -49,29 +50,36 @@ export default function MainHeader() {
 
                 {/* 桌面导航 */}
                 <nav className="hidden h-full items-stretch gap-1 text-sm font-medium text-slate-200 md:flex">
-                    <Button
-                        variant="ghost"
-                        size="sm"
-                        className="h-full rounded-md px-4 text-sm text-slate-200 hover:bg-slate-800/80 hover:text-sky-300"
-                    >
-                        主页
-                    </Button>
 
-                    <Button
-                        variant="ghost"
-                        size="sm"
-                        className="h-full rounded-md px-4 text-sm text-slate-200 hover:bg-slate-800/80 hover:text-sky-300"
-                    >
-                        成员
-                    </Button>
+                    <Link href="/">
+                        <Button
+                            variant="ghost"
+                            size="sm"
+                            className="h-full rounded-md px-4 text-sm text-slate-200 hover:bg-slate-800/80 hover:text-sky-300"
+                        >
+                            主页
+                        </Button>
+                    </Link>
 
-                    <Button
-                        variant="ghost"
-                        size="sm"
-                        className="h-full rounded-md px-4 text-sm text-slate-200 hover:bg-slate-800/80 hover:text-sky-300"
-                    >
-                        加入
-                    </Button>
+                    <Link href="/members">
+                        <Button
+                            variant="ghost"
+                            size="sm"
+                            className="h-full rounded-md px-4 text-sm text-slate-200 hover:bg-slate-800/80 hover:text-sky-300"
+                        >
+                            成员
+                        </Button>
+                    </Link>
+
+                    <Link href="/join">
+                        <Button
+                            variant="ghost"
+                            size="sm"
+                            className="h-full rounded-md px-4 text-sm text-slate-200 hover:bg-slate-800/80 hover:text-sky-300"
+                        >
+                            加入
+                        </Button>
+                    </Link>
 
                     {/* shadcn DropdownMenu */}
                     <DropdownMenu>
