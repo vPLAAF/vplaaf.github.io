@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const isProd = process.env.NODE_ENV === "production";
 
-const repoName = "vplaaf-web";
+const repoName = "vplaaf.github.io";
 
 const nextConfig: NextConfig = {
     output: "export",
