@@ -30,15 +30,14 @@ export default function MainHeader() {
                 {/* 左侧 Logo */}
                 <Link href="/" className="flex items-center gap-2">
                     <div className="flex h-12 w-12 items-center text-[9px] justify-center rounded-md border border-sky-400/60 bg-sky-500/15">
-{/*                        <Image
-                            src="/docs/logo-pack/logo_250px.png"
+                        <Image
+                            src="/docs/logo-pack/logo_500px.png"
                             alt="vPLAAF logo"
                             width={40}
                             height={40}
                             className="rounded-md border border-slate-700 object-contain"
                             priority
-                        />*/}
-                        BLH我的LOGO呢
+                        />
                     </div>
                     <div className="leading-tight">
                         <div className="text-[14px] font-semibold tracking-[0.25em] text-sky-300">
@@ -110,9 +109,13 @@ export default function MainHeader() {
                                 LOAs | 协议
                             </DropdownMenuItem>
                             <DropdownMenuSeparator className="bg-slate-800" />
-                            <DropdownMenuItem className="text-slate-300 hover:bg-slate-800/80">
-                                Privacy Policy | 隐私政策
-                            </DropdownMenuItem>
+
+                            <Link href = "/privacy">
+                                <DropdownMenuItem className="text-slate-300 hover:bg-slate-800/80">
+                                    Privacy Policy | 隐私政策
+                                </DropdownMenuItem>
+                            </Link>
+
                         </DropdownMenuContent>
                     </DropdownMenu>
                 </nav>
@@ -198,12 +201,15 @@ export default function MainHeader() {
                                         >
                                             LOAs | 协议
                                         </Button>
-                                        <Button
-                                            variant="ghost"
-                                            className="flex w-full justify-start rounded-md px-3 py-1.5 text-xs text-slate-300 hover:bg-slate-800/80"
-                                        >
-                                            Privacy Policy | 隐私政策
-                                        </Button>
+
+                                        <Link href = "/privacy">
+                                            <Button
+                                                variant="ghost"
+                                                className="flex w-full justify-start rounded-md px-3 py-1.5 text-xs text-slate-300 hover:bg-slate-800/80"
+                                            >
+                                                Privacy Policy | 隐私政策
+                                            </Button>
+                                        </Link>
                                     </div>
                                 )}
                             </div>
