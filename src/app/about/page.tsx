@@ -101,10 +101,10 @@ export default function AboutPage() {
                                                 </a>
                                             </p>
                                             <p className="text-sm text-slate-400">
-                                                Assists the Commander in daily management and coordination, website design and technical support.
+                                                Assists the Commander in daily management and coordination.
                                             </p>
                                             <p className="text-sm text-slate-400">
-                                                协助司令员开展日常管理、统筹部门协调与标准落实、负责网站维护与技术支持。
+                                                协助司令员开展日常管理、统筹部门协调与标准落实。
                                             </p>
                                         </div>
                                     </div>
@@ -137,6 +137,25 @@ export default function AboutPage() {
                                         </div>
 
                                     </div>
+
+                                    <div className="rounded-lg border border-slate-700/70 bg-slate-900/40 p-4">
+                                        <h4 className="font-semibold text-sky-300 text-sm uppercase tracking-widest">
+                                            Department Head / 军民协调部长
+                                        </h4>
+                                        <p className="mt-1 font-medium">Jingyuan Yin</p>
+                                        <p className="text-xs text-slate-400">
+                                            <a className="underline" href="mailto:coordination@vplaaf.org">
+                                                coordination@vplaaf.org
+                                            </a>
+                                        </p>
+                                        <p className="text-sm text-slate-400">
+                                            Coordinates with civil aviation and ensures compatibility with VATSIM systems.
+                                        </p>
+                                        <p className="text-sm text-slate-400">
+                                            负责与民航单位协调，确保组织活动与 VATSIM 环境兼容。
+                                        </p>
+                                    </div>
+
                                 </div>
 
                                 {/* 飞训作战部 */}
@@ -164,29 +183,30 @@ export default function AboutPage() {
                                     </div>
                                 </div>
 
-                                {/* 军民协调部 */}
+                                {/* 后勤部 */}
                                 <div className="space-y-3">
                                     <h3 className="text-xs font-semibold uppercase tracking-[0.25em] text-sky-300">
-                                        Military-Civil Coordination / 军民协调部
+                                        Logistics Department / 后勤部
                                     </h3>
 
                                     <div className="rounded-lg border border-slate-700/70 bg-slate-900/40 p-4">
                                         <h4 className="font-semibold text-sky-300 text-sm uppercase tracking-widest">
-                                            Department Head / 军民协调部长
+                                            Department Head / 后勤部部长
                                         </h4>
-                                        <p className="mt-1 font-medium">Jingyuan Yin</p>
+                                        <p className="mt-1 font-medium">Steven Zhang</p>
                                         <p className="text-xs text-slate-400">
-                                            <a className="underline" href="mailto:coordination@vplaaf.org">
-                                                coordination@vplaaf.org
+                                            <a className="underline" href="mailto:web@vplaaf.org">
+                                                web@vplaaf.org
                                             </a>
                                         </p>
                                         <p className="text-sm text-slate-400">
-                                            Coordinates with civil aviation and ensures compatibility with VATSIM systems.
+                                            In charge of website maintenance and technical support.
                                         </p>
                                         <p className="text-sm text-slate-400">
-                                            负责与民航单位协调，确保组织活动与 VATSIM 环境兼容。
+                                            负责网站维护和技术支持
                                         </p>
                                     </div>
+
                                 </div>
 
                                 {/* 组织部 */}
