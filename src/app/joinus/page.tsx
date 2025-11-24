@@ -10,27 +10,20 @@ export default function JoinUsPage() {
             {/* 背景图片层 */}
             <div
                 className="absolute inset-0 z-0 bg-cover bg-center"
-                style={{ backgroundImage: "url('/imgs/bg.jpg')" }}
+                style={{ backgroundImage: "url('/imgs/joinus.png')" }}
             >
                 <div className="absolute inset-0 bg-slate-950/40 backdrop-blur-xs pointer-events-none" />
             </div>
 
             {/* 背景图右下角版权 */}
             <div className="pointer-events-auto fixed right-3 bottom-3 z-30 rounded-md bg-slate-900/40 px-2 py-1 text-[10px] text-slate-300 backdrop-blur-sm border border-slate-700/50">
-                <a href="https://commons.wikimedia.org/wiki/File:Two_J-20s_at_CCAS2022_(20220827103238).jpg">
-                    Image: N509FZ
-                </a>
-                ,{" "}
-                <a href="https://creativecommons.org/licenses/by-sa/4.0">
-                    CC BY-SA 4.0
-                </a>
-                , via Wikimedia Commons
+                <a href="https://commons.wikimedia.org/wiki/File:PeacefulMission2018-20.jpg">Mil.ru</a>, <a href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a>, via Wikimedia Commons
             </div>
 
             <div className="relative z-20">
                 <MainHeader />
 
-                <main className="mx-auto flex min-h-screen max-w-5xl flex-col px-4 pb-20 pt-20 sm:px-6 lg:px-8">
+                <main className="mx-auto flex min-h-screen max-w-5xl flex-col px-4 pb-20 pt-30 sm:px-6 lg:px-8">
                     <section className="flex flex-1">
                         <div className="w-full space-y-8 rounded-2xl bg-slate-950/40 p-6 shadow-[0_0_80px_rgba(15,23,42,0.85)] ring-1 ring-slate-800/70">
                             {/* Title */}
