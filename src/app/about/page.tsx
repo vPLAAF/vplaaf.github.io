@@ -183,31 +183,6 @@ export default function AboutPage() {
                                     </div>
                                 </div>
 
-                                {/* 后勤部 */}
-                                <div className="space-y-3">
-                                    <h3 className="text-xs font-semibold uppercase tracking-[0.25em] text-sky-300">
-                                        Logistics Department / 后勤部
-                                    </h3>
-
-                                    <div className="rounded-lg border border-slate-700/70 bg-slate-900/40 p-4">
-                                        <h4 className="font-semibold text-sky-300 text-sm uppercase tracking-widest">
-                                            Department Head / 后勤部部长
-                                        </h4>
-                                        <p className="mt-1 font-medium">Steven Zhang</p>
-                                        <p className="text-xs text-slate-400">
-                                            <a className="underline" href="mailto:web@vplaaf.org">
-                                                web@vplaaf.org
-                                            </a>
-                                        </p>
-                                        <p className="text-sm text-slate-400">
-                                            In charge of website maintenance and technical support.
-                                        </p>
-                                        <p className="text-sm text-slate-400">
-                                            负责网站维护和技术支持
-                                        </p>
-                                    </div>
-
-                                </div>
 
                                 {/* 组织部 */}
                                 <div className="space-y-3">
@@ -254,6 +229,35 @@ export default function AboutPage() {
                                     </div>
 
                                 </div>
+
+
+                                {/* 后勤部 */}
+                                <div className="space-y-3">
+                                    <h3 className="text-xs font-semibold uppercase tracking-[0.25em] text-sky-300">
+                                        Logistics Department / 后勤部
+                                    </h3>
+
+                                    <div className="rounded-lg border border-slate-700/70 bg-slate-900/40 p-4">
+                                        <h4 className="font-semibold text-sky-300 text-sm uppercase tracking-widest">
+                                            Department Head / 后勤部部长
+                                        </h4>
+                                        <p className="mt-1 font-medium">Xinrui Wan</p>
+                                        <p className="text-xs text-slate-400">
+                                            <a className="underline" href="mailto:web@vplaaf.org">
+                                                web@vplaaf.org
+                                            </a>
+                                        </p>
+                                        <p className="text-sm text-slate-400">
+                                            In charge of website maintenance and technical support.
+                                        </p>
+                                        <p className="text-sm text-slate-400">
+                                            负责网站维护和技术支持
+                                        </p>
+                                    </div>
+
+                                </div>
+
+
                             </div>
                         </div>
                     </section>
