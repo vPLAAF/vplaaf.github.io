@@ -8,7 +8,7 @@ export default function PrivacyPage() {
     <div className="min-h-screen flex flex-col bg-slate-950">
 
         <MainHeader />
-        <main className="flex-1 pt-20">
+        <main className="flex-1 pt-20 -mb-20 w-full overflow-y-auto">
             <PrivacyPageClient />
         </main>
         <MainFooter />

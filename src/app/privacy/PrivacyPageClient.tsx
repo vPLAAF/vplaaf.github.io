@@ -17,8 +17,8 @@ export default function PrivacyPage() {
         async function fetchMarkdown() {
             try {
                 const [enRes, zhRes] = await Promise.all([
-                    fetch("docs/privacy/en.md"),
-                    fetch("docs/privacy/zh.md"),
+                    fetch("https://www.vplaaf.org/docs/privacy/en.md"),
+                    fetch("https://www.vplaaf.org/docs/privacy/zh.md"),
                 ]);
 
                 if (!enRes.ok || !zhRes.ok) {
@@ -51,7 +51,7 @@ export default function PrivacyPage() {
     }
 
     return (
-        <div className="max-w-6xl mx-auto px-4 py-10 text-slate-100">
+        <div className="w-full mx-auto px-4 py-10 text-slate-100">
             <h1 className="text-4xl font-bold mb-8 text-center tracking-wide text-sky-300">
                 Privacy Policy · 隐私政策
             </h1>
