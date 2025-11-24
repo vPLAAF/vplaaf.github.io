@@ -57,7 +57,7 @@ export default function MainHeader() {
                             size="sm"
                             className="h-full rounded-md px-4 text-sm text-slate-200 hover:bg-slate-800/80 hover:text-sky-300"
                         >
-                            主页
+                            Home | 主页
                         </Button>
                     </Link>
 
@@ -67,17 +67,17 @@ export default function MainHeader() {
                             size="sm"
                             className="h-full rounded-md px-4 text-sm text-slate-200 hover:bg-slate-800/80 hover:text-sky-300"
                         >
-                            成员
+                            Members | 成员
                         </Button>
                     </Link>
 
-                    <Link href="/join">
+                    <Link href="/joinus">
                         <Button
                             variant="ghost"
                             size="sm"
                             className="h-full rounded-md px-4 text-sm text-slate-200 hover:bg-slate-800/80 hover:text-sky-300"
                         >
-                            加入
+                            Join us | 加入
                         </Button>
                     </Link>
 
@@ -89,7 +89,7 @@ export default function MainHeader() {
                                 size="sm"
                                 className="h-full rounded-md px-4 text-sm text-slate-200 hover:bg-slate-800/80 hover:text-sky-300 inline-flex items-center gap-1"
                             >
-                                关于
+                                About | 关于
                                 <span className="text-[10px]">▾</span>
                             </Button>
                         </DropdownMenuTrigger>
@@ -98,20 +98,20 @@ export default function MainHeader() {
                             className="min-w-[180px] border-slate-800 bg-slate-950 text-sm text-slate-200"
                         >
                             <DropdownMenuItem className="text-slate-200 hover:bg-slate-800/80">
-                                关于我们
+                                About us | 关于我们
                             </DropdownMenuItem>
                             <DropdownMenuItem className="text-slate-200 hover:bg-slate-800/80">
-                                职员
+                                Staffs | 职员
                             </DropdownMenuItem>
                             <DropdownMenuItem className="text-slate-200 hover:bg-slate-800/80">
-                                标准程序
+                                SOPs | 标准程序
                             </DropdownMenuItem>
                             <DropdownMenuItem className="text-slate-200 hover:bg-slate-800/80">
-                                协议
+                                LOAs | 协议
                             </DropdownMenuItem>
                             <DropdownMenuSeparator className="bg-slate-800" />
                             <DropdownMenuItem className="text-slate-300 hover:bg-slate-800/80">
-                                隐私政策
+                                Privacy Policy | 隐私政策
                             </DropdownMenuItem>
                         </DropdownMenuContent>
                     </DropdownMenu>
@@ -135,7 +135,7 @@ export default function MainHeader() {
                     >
                         <SheetHeader className="mb-4">
                             <SheetTitle className="text-sm font-semibold text-slate-100">
-                                vPLAAF 导航
+                                vPLAAF
                             </SheetTitle>
                         </SheetHeader>
 
@@ -144,19 +144,19 @@ export default function MainHeader() {
                                 variant="ghost"
                                 className="flex w-full justify-start rounded-md px-3 py-2 text-slate-200 hover:bg-slate-800/80"
                             >
-                                主页
+                                Home | 主页
                             </Button>
                             <Button
                                 variant="ghost"
                                 className="flex w-full justify-start rounded-md px-3 py-2 text-slate-200 hover:bg-slate-800/80"
                             >
-                                成员
+                                Members | 成员
                             </Button>
                             <Button
                                 variant="ghost"
                                 className="flex w-full justify-start rounded-md px-3 py-2 text-slate-200 hover:bg-slate-800/80"
                             >
-                                加入
+                                Join us | 加入
                             </Button>
 
                             {/* 移动端里的“关于”组，点击展开子项 */}
@@ -166,7 +166,7 @@ export default function MainHeader() {
                                     onClick={() => setMobileAboutOpen((v) => !v)}
                                     className="flex w-full items-center justify-between rounded-md px-3 py-2 text-left text-slate-200 hover:bg-slate-800/80"
                                 >
-                                    <span className="text-xs">关于</span>
+                                    <span className="text-xs">About | 关于</span>
                                     <span className="text-[10px]">
                     {mobileAboutOpen ? "▴" : "▾"}
                   </span>
@@ -178,31 +178,31 @@ export default function MainHeader() {
                                             variant="ghost"
                                             className="flex w-full justify-start rounded-md px-3 py-1.5 text-xs text-slate-200 hover:bg-slate-800/80"
                                         >
-                                            关于我们
+                                            About us | 关于我们
                                         </Button>
                                         <Button
                                             variant="ghost"
                                             className="flex w-full justify-start rounded-md px-3 py-1.5 text-xs text-slate-200 hover:bg-slate-800/80"
                                         >
-                                            职员
+                                            Staffs | 职员
                                         </Button>
                                         <Button
                                             variant="ghost"
                                             className="flex w-full justify-start rounded-md px-3 py-1.5 text-xs text-slate-200 hover:bg-slate-800/80"
                                         >
-                                            标准程序
+                                            SOPs | 标准程序
                                         </Button>
                                         <Button
                                             variant="ghost"
                                             className="flex w-full justify-start rounded-md px-3 py-1.5 text-xs text-slate-200 hover:bg-slate-800/80"
                                         >
-                                            协议
+                                            LOAs | 协议
                                         </Button>
                                         <Button
                                             variant="ghost"
                                             className="flex w-full justify-start rounded-md px-3 py-1.5 text-xs text-slate-300 hover:bg-slate-800/80"
                                         >
-                                            隐私政策
+                                            Privacy Policy | 隐私政策
                                         </Button>
                                     </div>
                                 )}

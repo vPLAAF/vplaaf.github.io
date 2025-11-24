@@ -6,6 +6,10 @@ export default function MainFooter() {
                 · Non-official VATSIM Virtual Organization.
             </p>
             <p className="mt-1">
+                vPLAAF is in no way
+                affiliated with any real-world military unit or position
+            </p>
+            <p className="mt-1">
                 本组织为完全虚构，仅用于飞行模拟与网络娱乐，不代表任何现实军事单位或立场。
             </p>
         </footer>
