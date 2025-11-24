@@ -29,22 +29,22 @@ export default function MainHeader() {
             <div className="mx-auto flex h-20 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
                 {/* 左侧 Logo */}
                 <Link href="/" className="flex items-center gap-2">
-                    <div className="flex h-12 w-12 items-center text-[9px] justify-center rounded-md border border-sky-400/60 bg-sky-500/15">
+                    <div className="flex h-60 w-80 items-center text-[9px] justify-center">
                         <Image
-                            src="/docs/logo-pack/logo_500px.png"
+                            src="https://www.vplaaf.org/docs/logo-pack/logo_standard_500px.png"
                             alt="vPLAAF logo"
-                            width={40}
-                            height={40}
-                            className="rounded-md border border-slate-700 object-contain"
+                            width={2000}
+                            height={200}
+                            className="object-contain"
                             priority
                         />
                     </div>
-                    <div className="leading-tight">
+                    {/*<div className="leading-tight">
                         <div className="text-[14px] font-semibold tracking-[0.25em] text-sky-300">
                             vPLAAF
                         </div>
                         <div className="text-[12px] text-slate-400">虚拟中国空军</div>
-                    </div>
+                    </div>*/}
                 </Link>
 
                 {/* 桌面导航 */}
@@ -88,7 +88,7 @@ export default function MainHeader() {
                                 size="sm"
                                 className="h-full rounded-md px-4 text-sm text-slate-200 hover:bg-slate-800/80 hover:text-sky-300 inline-flex items-center gap-1"
                             >
-                                About | 关于
+                                Rules | 规则
                                 <span className="text-[10px]">▾</span>
                             </Button>
                         </DropdownMenuTrigger>
@@ -96,12 +96,6 @@ export default function MainHeader() {
                             align="end"
                             className="min-w-[180px] border-slate-800 bg-slate-950 text-sm text-slate-200"
                         >
-                            <DropdownMenuItem className="text-slate-200 hover:bg-slate-800/80">
-                                About us | 关于我们
-                            </DropdownMenuItem>
-                            <DropdownMenuItem className="text-slate-200 hover:bg-slate-800/80">
-                                Staffs | 职员
-                            </DropdownMenuItem>
                             <DropdownMenuItem className="text-slate-200 hover:bg-slate-800/80">
                                 SOPs | 标准程序
                             </DropdownMenuItem>
@@ -118,6 +112,16 @@ export default function MainHeader() {
 
                         </DropdownMenuContent>
                     </DropdownMenu>
+
+                    <Link href="/about">
+                        <Button
+                            variant="ghost"
+                            size="sm"
+                            className="h-full rounded-md px-4 text-sm text-slate-200 hover:bg-slate-800/80 hover:text-sky-300"
+                        >
+                            About us | 关于我们
+                        </Button>
+                    </Link>
                 </nav>
 
                 {/* 移动端 */}
@@ -169,7 +173,7 @@ export default function MainHeader() {
                                     onClick={() => setMobileAboutOpen((v) => !v)}
                                     className="flex w-full items-center justify-between rounded-md px-3 py-2 text-left text-slate-200 hover:bg-slate-800/80"
                                 >
-                                    <span className="text-xs">About | 关于</span>
+                                    <span className="text-xs">Rules | 规则</span>
                                     <span className="text-[10px]">
                     {mobileAboutOpen ? "▴" : "▾"}
                   </span>
@@ -177,12 +181,6 @@ export default function MainHeader() {
 
                                 {mobileAboutOpen && (
                                     <div className="mt-1 space-y-1 pl-3">
-                                        <Button
-                                            variant="ghost"
-                                            className="flex w-full justify-start rounded-md px-3 py-1.5 text-xs text-slate-200 hover:bg-slate-800/80"
-                                        >
-                                            About us | 关于我们
-                                        </Button>
                                         <Button
                                             variant="ghost"
                                             className="flex w-full justify-start rounded-md px-3 py-1.5 text-xs text-slate-200 hover:bg-slate-800/80"
@@ -213,6 +211,13 @@ export default function MainHeader() {
                                     </div>
                                 )}
                             </div>
+
+                            <Button
+                                variant="ghost"
+                                className="flex w-full justify-start rounded-md px-3 py-2 text-slate-200 hover:bg-slate-800/80"
+                            >
+                                About us | 关于我们
+                            </Button>
                         </div>
                     </SheetContent>
                 </Sheet>

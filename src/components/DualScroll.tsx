@@ -2,6 +2,7 @@
 
 import React, { useRef } from "react";
 import ReactMarkdown from "react-markdown";
+import remarkGfm from 'remark-gfm';
 
 interface DualScrollProps {
     enMarkdown: string;
@@ -62,8 +63,8 @@ export default function DualScroll(
                    text-slate-200
                    shadow-inner"
             >
-                <article className="prose prose-invert max-w-none">
-                    <ReactMarkdown>{enMarkdown}</ReactMarkdown>
+                <article className="markdown-body">
+                    <ReactMarkdown remarkPlugins={[remarkGfm]}>{enMarkdown}</ReactMarkdown>
                 </article>
             </section>
 
@@ -75,8 +76,8 @@ export default function DualScroll(
                    text-slate-200
                    shadow-inner"
             >
-                <article className="prose prose-invert max-w-none">
-                    <ReactMarkdown>{zhMarkdown}</ReactMarkdown>
+                <article className="markdown-body">
+                    <ReactMarkdown remarkPlugins={[remarkGfm]}>{zhMarkdown}</ReactMarkdown>
                 </article>
             </section>
 
