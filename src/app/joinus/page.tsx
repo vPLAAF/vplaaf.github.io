@@ -12,7 +12,7 @@ export default function JoinUsPage() {
                 className="absolute inset-0 z-0 bg-cover bg-center"
                 style={{ backgroundImage: "url('/imgs/joinus.png')" }}
             >
-                <div className="absolute inset-0 bg-slate-950/40 backdrop-blur-xs pointer-events-none" />
+                <div className="absolute inset-0 bg-slate-950/40 backdrop-blur-sm pointer-events-none" />
             </div>
 
             {/* 背景图右下角版权 */}
@@ -23,12 +23,12 @@ export default function JoinUsPage() {
             <div className="relative z-20">
                 <MainHeader />
 
-                <main className="mx-auto flex min-h-screen max-w-5xl flex-col px-4 pb-20 pt-30 sm:px-6 lg:px-8">
+                <main className="mx-auto flex max-w-6xl flex-col px-4 pb-20 pt-30 sm:px-6 lg:px-8">
                     <section className="flex flex-1">
-                        <div className="w-full space-y-8 rounded-2xl bg-slate-950/40 p-6 shadow-[0_0_80px_rgba(15,23,42,0.85)] ring-1 ring-slate-800/70">
+                        <div className="w-full space-y-8 rounded-2xl bg-slate-950/80 p-6 shadow-[0_0_80px_rgba(15,23,42,0.85)] ring-1 ring-slate-800/70">
                             {/* Title */}
                             <h1 className="text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl">
-                                Join vPLAAF · 加入虚拟中国空军
+                                Join vPLAAF | 加入虚拟中国空军
                             </h1>
 
                             {/* Intro EN + ZH */}
@@ -51,7 +51,7 @@ export default function JoinUsPage() {
                             {/* Requirements */}
                             <div className="space-y-3 pt-4">
                                 <h2 className="text-2xl font-semibold sm:text-3xl">
-                                    Requirements · 招募要求
+                                    Requirements | 招募要求
                                 </h2>
 
                                 <ul className="ml-5 list-disc space-y-2 text-sm text-slate-300 sm:text-base">
@@ -115,7 +115,7 @@ export default function JoinUsPage() {
                             {/* How to apply */}
                             <div className="space-y-3 pt-6">
                                 <h2 className="text-2xl font-semibold sm:text-3xl">
-                                    How to Apply · 如何申请
+                                    How to Apply | 如何申请
                                 </h2>
 
                                 <div className="space-y-2 text-sm leading-relaxed text-slate-300 sm:text-base">
@@ -178,7 +178,7 @@ export default function JoinUsPage() {
                                                 hover:shadow-[0_0_30px_rgba(56,189,248,0.7)]
                                             "
                                         >
-                                            Apply via Email · 邮件申请
+                                            Apply via Email | 邮件申请
                                         </Button>
                                     </a>
                                 </div>

@@ -96,12 +96,17 @@ export default function MainHeader() {
                             align="end"
                             className="min-w-[180px] border-slate-800 bg-slate-950 text-sm text-slate-200"
                         >
+                            <Link href="/sop">
                             <DropdownMenuItem className="text-slate-200 hover:bg-slate-800/80">
-                                SOPs | 标准程序
+                                SOP | 标准运行程序
                             </DropdownMenuItem>
+                            </Link>
+
                             <DropdownMenuItem className="text-slate-200 hover:bg-slate-800/80">
-                                LOAs | 协议
+                                LOAs | 协议书
                             </DropdownMenuItem>
+
+
                             <DropdownMenuSeparator className="bg-slate-800" />
 
                             <Link href = "/privacy">
@@ -191,13 +196,13 @@ export default function MainHeader() {
                                             variant="ghost"
                                             className="flex w-full justify-start rounded-md px-3 py-1.5 text-xs text-slate-200 hover:bg-slate-800/80"
                                         >
-                                            SOPs | 标准程序
+                                            SOP | 标准运行程序
                                         </Button>
                                         <Button
                                             variant="ghost"
                                             className="flex w-full justify-start rounded-md px-3 py-1.5 text-xs text-slate-200 hover:bg-slate-800/80"
                                         >
-                                            LOAs | 协议
+                                            LOAs | 协议书
                                         </Button>
 
                                         <Link href = "/privacy">

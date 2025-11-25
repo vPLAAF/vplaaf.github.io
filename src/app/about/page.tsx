@@ -23,7 +23,7 @@ export default function AboutPage() {
 
                 <MainHeader />
 
-                <main className="mx-auto flex min-h-screen max-w-5xl flex-col px-4 pb-20 pt-30 sm:px-6 lg:px-8">
+                <main className="mx-auto flex min-h-screen max-w-6xl flex-col px-4 pb-20 pt-30 sm:px-6 lg:px-8">
                     <section className="flex flex-1">
                         <div className="w-full space-y-8 rounded-2xl bg-slate-950/40 p-6 shadow-[0_0_80px_rgba(15,23,42,0.85)] ring-1 ring-slate-800/70">
 
@@ -221,10 +221,10 @@ export default function AboutPage() {
                                             </a>
                                         </p>
                                         <p className="text-sm text-slate-400">
-                                            Manages member recruitment, records, and assignments.
+                                            Manages member recruitment and records.
                                         </p>
                                         <p className="text-sm text-slate-400">
-                                            负责成员招募、档案管理与岗位分配。
+                                            负责成员招募、档案管理。
                                         </p>
                                     </div>
 

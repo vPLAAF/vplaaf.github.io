@@ -175,7 +175,7 @@
 }
 /* 表格整体 */
 .markdown-body table {
-    @apply w-full my-4 text-sm;
+    @apply w-full my-4 text-base;
 }
 
 /* 表格外边框 */

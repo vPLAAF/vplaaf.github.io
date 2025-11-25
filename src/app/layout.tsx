@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "vPLAAF 虚拟中国空军",
+  title: "vPLAAF | 虚拟中国空军",
   description: "虚拟中国空军官网",
 };
 

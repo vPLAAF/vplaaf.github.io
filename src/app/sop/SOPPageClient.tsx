@@ -5,7 +5,7 @@ import DualScroll from "@/components/DualScroll";
 import {useEffect, useState} from "react";
 
 
-export default function PrivacyPage() {
+export default function SOPPage() {
 
     const [enMarkdown, setEnMarkdown] = useState<string>("");
     const [zhMarkdown, setZhMarkdown] = useState<string>("");
@@ -17,21 +17,27 @@ export default function PrivacyPage() {
         async function fetchMarkdown() {
             try {
                 const [enRes, zhRes] = await Promise.all([
-                    fetch("https://www.vplaaf.org/docs/privacy/en.md"),
-                    fetch("https://www.vplaaf.org/docs/privacy/zh.md"),
+                    fetch("https://www.vplaaf.org/docs/sop/en.md"),
+                    fetch("https://www.vplaaf.org/docs/sop/zh.md"),
                 ]);
-
-                if (!enRes.ok || !zhRes.ok) {
-                    throw new Error("Failed to fetch markdown files");
-                }
 
                 const [enText, zhText] = await Promise.all([
                     enRes.text(),
                     zhRes.text(),
                 ]);
 
-                setEnMarkdown(enText);
-                setZhMarkdown(zhText);
+                if (!enRes.ok) {
+                    setEnMarkdown("Unable to load file..");
+                }else{
+                    setEnMarkdown(enText);
+                }
+
+                if (!zhRes.ok) {
+                    setZhMarkdown("无法加载文件内容...");
+                }else{
+                    setZhMarkdown(zhText);
+                }
+
             } catch (error) {
                 console.error("Error fetching markdown files:", error);
             } finally {
@@ -53,7 +59,7 @@ export default function PrivacyPage() {
     return (
         <div className="w-full mx-auto px-4 py-10 text-slate-100">
             <h1 className="text-4xl font-bold mb-8 text-center tracking-wide text-sky-300">
-                Privacy Policy | 隐私政策
+                SOP | 标准运行程序
             </h1>
 
             <DualScroll enMarkdown={enMarkdown} zhMarkdown={zhMarkdown} />
