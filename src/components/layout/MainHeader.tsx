@@ -102,12 +102,14 @@ export default function MainHeader() {
                             </DropdownMenuItem>
                             </Link>
 
+                            <Link href="/loas">
                             <DropdownMenuItem className="text-slate-200 hover:bg-slate-800/80">
                                 LOAs | 协议书
                             </DropdownMenuItem>
+                            </Link>
 
 
-                            <DropdownMenuSeparator className="bg-slate-800" />
+                            <DropdownMenuSeparator className="bg-slate-500 w-7/8 mx-auto" />
 
                             <Link href = "/privacy">
                                 <DropdownMenuItem className="text-slate-300 hover:bg-slate-800/80">
@@ -152,26 +154,35 @@ export default function MainHeader() {
                         </SheetHeader>
 
                         <div className="space-y-2 text-xs">
+
+                            <Link href="/">
                             <Button
                                 variant="ghost"
                                 className="flex w-full justify-start rounded-md px-3 py-2 text-slate-200 hover:bg-slate-800/80"
                             >
                                 Home | 主页
                             </Button>
+                            </Link>
+
+                            <Link href="/members">
                             <Button
                                 variant="ghost"
                                 className="flex w-full justify-start rounded-md px-3 py-2 text-slate-200 hover:bg-slate-800/80"
                             >
                                 Members | 成员
                             </Button>
+                            </Link>
+
+                            <Link href="/joinus">
                             <Button
                                 variant="ghost"
                                 className="flex w-full justify-start rounded-md px-3 py-2 text-slate-200 hover:bg-slate-800/80"
                             >
                                 Join us | 加入
                             </Button>
+                            </Link>
 
-                            {/* 移动端里的“关于”组，点击展开子项 */}
+
                             <div className="pt-2">
                                 <button
                                     type="button"
@@ -186,24 +197,24 @@ export default function MainHeader() {
 
                                 {mobileAboutOpen && (
                                     <div className="mt-1 space-y-1 pl-3">
-                                        <Button
-                                            variant="ghost"
-                                            className="flex w-full justify-start rounded-md px-3 py-1.5 text-xs text-slate-200 hover:bg-slate-800/80"
-                                        >
-                                            Staffs | 职员
-                                        </Button>
+
+                                        <Link href="/sop">
                                         <Button
                                             variant="ghost"
                                             className="flex w-full justify-start rounded-md px-3 py-1.5 text-xs text-slate-200 hover:bg-slate-800/80"
                                         >
                                             SOP | 标准运行程序
                                         </Button>
+                                        </Link>
+
+                                        <Link href="/loas">
                                         <Button
                                             variant="ghost"
                                             className="flex w-full justify-start rounded-md px-3 py-1.5 text-xs text-slate-200 hover:bg-slate-800/80"
                                         >
                                             LOAs | 协议书
                                         </Button>
+                                        </Link>
 
                                         <Link href = "/privacy">
                                             <Button
@@ -217,12 +228,16 @@ export default function MainHeader() {
                                 )}
                             </div>
 
+                            <Link href="/about">
                             <Button
                                 variant="ghost"
                                 className="flex w-full justify-start rounded-md px-3 py-2 text-slate-200 hover:bg-slate-800/80"
                             >
                                 About us | 关于我们
                             </Button>
+                            </Link>
+
+
                         </div>
                     </SheetContent>
                 </Sheet>

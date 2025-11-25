@@ -23,14 +23,13 @@ export default function JoinUsPage() {
             <div className="relative z-20">
                 <MainHeader />
 
-                <main className="mx-auto flex max-w-6xl flex-col px-4 pb-20 pt-30 sm:px-6 lg:px-8">
-                    <section className="flex flex-1">
-                        <div className="w-full space-y-8 rounded-2xl bg-slate-950/80 p-6 shadow-[0_0_80px_rgba(15,23,42,0.85)] ring-1 ring-slate-800/70">
-                            {/* Title */}
-                            <h1 className="text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl">
-                                Join vPLAAF | 加入虚拟中国空军
-                            </h1>
+                <main className="mx-auto flex max-w-6xl flex-col px-4 pt-20 sm:px-6 lg:px-8">
+                    <div className="w-full mx-auto px-4 py-10  text-slate-100">
+                        <h1 className="text-4xl font-bold mb-8 text-center tracking-wide text-sky-300">
+                            Join vPLAAF | 加入虚拟中国空军
+                        </h1>
 
+                        <div className="w-full space-y-8 rounded-2xl bg-slate-950/80 p-6 shadow-[0_0_80px_rgba(15,23,42,0.85)] ring-1 ring-slate-800/70">
                             {/* Intro EN + ZH */}
                             <div className="space-y-3 text-sm leading-relaxed text-slate-300 sm:text-base">
                                 <p>
@@ -47,76 +46,59 @@ export default function JoinUsPage() {
                                     稳定、互相支持的团队。
                                 </p>
                             </div>
+                        </div>
 
-                            {/* Requirements */}
-                            <div className="space-y-3 pt-4">
-                                <h2 className="text-2xl font-semibold sm:text-3xl">
-                                    Requirements | 招募要求
-                                </h2>
+                        <h2 className="text-3xl font-bold mb-5 mt-5 text-center tracking-wide text-sky-300">
+                            Requirements | 招募要求
+                        </h2>
+                        <div className="w-full space-y-8 rounded-2xl bg-slate-950/80 p-6 shadow-[0_0_80px_rgba(15,23,42,0.85)] ring-1 ring-slate-800/70">
 
                                 <ul className="ml-5 list-disc space-y-2 text-sm text-slate-300 sm:text-base">
                                     <li>
-                                        <p>Must be at least 18 years old.</p>
-                                        <p>年满 18 周岁。</p>
+                                        <p>Must be at least 21 years old, having a valid VATSIM account and no record of serious violations</p>
+                                        <p>年满 21 周岁, 拥有有效 VATSIM 账号，且无严重违规记录</p>
                                     </li>
                                     <li>
                                         <p>
-                                            Able to communicate fluently in both Chinese and English
-                                            (text and voice).
+                                            Be fluent in English and Mandarin for communications,
+                                            capable of comprehending and accurately executing ATC instructions.
                                         </p>
                                         <p>
-                                            能够熟练使用中英文进行沟通（包括文字与语音）。
-                                        </p>
-                                    </li>
-                                    <li>
-                                        <p>
-                                            Solid flight skills with demonstrable experience on VATSIM
-                                            (proficient in basic IFR procedures and online flying).
-                                        </p>
-                                        <p>
-                                            具有扎实的飞行技术，并拥有熟练的 VATSIM 连飞经验
-                                            （熟悉基本仪表程序与联网上的飞行流程）。
+                                            具备流利的英语和普通话陆空对话能力，能够理解并准确执行 ATC 指令。
                                         </p>
                                     </li>
                                     <li>
                                         <p>
-                                            Willingness to follow vPLAAF SOPs, VATSIM CoC and VSOA
-                                            policies, and to maintain professional conduct on all
-                                            networks and platforms.
+                                            Experienced in flight simulation on VATSIM and willing to undergo relevant specialised flight training and assessment.
                                         </p>
                                         <p>
-                                            承诺遵守 vPLAAF 标准作业程序（SOP）、VATSIM
-                                            行为守则及相关 VSOA 政策，在所有平台上保持专业、
-                                            自律的行为表现。
+                                            在VATSIM具备熟练的飞行模拟经验，并且愿意接受相应特殊飞行培训和考核
                                         </p>
                                     </li>
                                     <li>
                                         <p>
-                                            Able to participate in regular training or missions.
+                                            Follow the objectives, principles and regulations of the vPLAAF,
+                                            comply with the SOP and other internal regulations.
                                         </p>
                                         <p>
-                                            能够在时间允许的情况下参加一定频率的训练或任务，
-                                            保持基本出勤率与可靠性。
+                                            认同 vPLAAF 的定位、宗旨与规则，愿意遵守本 SOP 及其他内部规定
                                         </p>
                                     </li>
                                     <li>
                                         <p>
-                                            A cooperative mindset and respect for teamwork, briefings,
-                                            and debriefings (AAR).
+                                            Clearly understand and accept: Joining the vPLAAF does not confer any actual military status or associated rights.
                                         </p>
                                         <p>
-                                            具备合作意识，尊重团队协作及简报 / 事后讲评（AAR）
-                                            流程。
+                                            明确理解并接受：加入 vPLAAF 不赋予任何现实军人身份或相关权利。
                                         </p>
                                     </li>
                                 </ul>
-                            </div>
+                        </div>
 
-                            {/* How to apply */}
-                            <div className="space-y-3 pt-6">
-                                <h2 className="text-2xl font-semibold sm:text-3xl">
-                                    How to Apply | 如何申请
-                                </h2>
+                        <h2 className="text-3xl font-bold mb-5 mt-5 text-center tracking-wide text-sky-300">
+                            How to Apply | 如何申请
+                        </h2>
+                        <div className="w-full space-y-8 rounded-2xl bg-slate-950/80 p-6 shadow-[0_0_80px_rgba(15,23,42,0.85)] ring-1 ring-slate-800/70">
 
                                 <div className="space-y-2 text-sm leading-relaxed text-slate-300 sm:text-base">
                                     <p>
@@ -157,7 +139,7 @@ export default function JoinUsPage() {
                                 </div>
 
                                 {/* Apply button */}
-                                <div className="pt-2">
+                                <div className="pt-2 flex justify-center">
                                     <a href="mailto:apply@vplaaf.org?subject=vPLAAF%20Application">
                                         <Button
                                             className="
@@ -182,9 +164,8 @@ export default function JoinUsPage() {
                                         </Button>
                                     </a>
                                 </div>
-                            </div>
                         </div>
-                    </section>
+                    </div>
 
                     <MainFooter />
                 </main>

@@ -38,7 +38,7 @@ export default async function MembersPage() {
             <div className="relative z-20">
                     <MainHeader />
 
-                    <main className="mx-auto flex max-w-6xl flex-col px-4 pb-20 pt-30 sm:px-6 lg:px-8">
+                    <main className="mx-auto flex max-w-6xl flex-col px-4 pt-20 sm:px-6 lg:px-8">
                         <div className="w-full mx-auto px-4 py-10  text-slate-100">
                             <h1 className="text-4xl font-bold mb-8 text-center tracking-wide text-sky-300">
                                 Roster of Members | 成员列表

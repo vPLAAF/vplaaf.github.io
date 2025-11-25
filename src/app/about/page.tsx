@@ -23,15 +23,13 @@ export default function AboutPage() {
 
                 <MainHeader />
 
-                <main className="mx-auto flex min-h-screen max-w-6xl flex-col px-4 pb-20 pt-30 sm:px-6 lg:px-8">
-                    <section className="flex flex-1">
-                        <div className="w-full space-y-8 rounded-2xl bg-slate-950/40 p-6 shadow-[0_0_80px_rgba(15,23,42,0.85)] ring-1 ring-slate-800/70">
+                <main className="mx-auto flex max-w-6xl flex-col px-4 pt-20 sm:px-6 lg:px-8">
+                    <div className="w-full mx-auto px-4 py-10  text-slate-100">
+                        <h1 className="text-4xl font-bold mb-8 text-center tracking-wide text-sky-300">
+                            About us | 关于我们
+                        </h1>
 
-                            {/* 标题 */}
-                            <h1 className="text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl">
-                                About vPLAAF · 关于虚拟中国空军
-                            </h1>
-
+                        <div className="mt-4 rounded-xl border border-slate-800 bg-slate-900/80 p-4">
                             {/* 概况介绍 */}
                             <div className="space-y-3 text-sm leading-relaxed text-slate-300 sm:text-base">
                                 <p>
@@ -54,12 +52,14 @@ export default function AboutPage() {
                                     所有编制、任务、称谓均为虚构，不代表任何现实军事单位或立场。
                                 </p>
                             </div>
+                        </div>
 
+                        <h2 className="text-3xl mt-5 font-bold mb-5 text-center tracking-wide text-sky-300">
+                            Organization &amp; Staff · 组织架构与职员
+                        </h2>
+                        <div className="mt-4 rounded-xl border border-slate-800 bg-slate-900/80 p-4">
                             {/* 组织架构 */}
                             <div className="pt-4 space-y-6">
-                                <h2 className="text-2xl font-semibold sm:text-3xl">
-                                    Organization &amp; Staff · 组织架构与职员
-                                </h2>
 
                                 {/* 司令部 */}
                                 <div className="space-y-3">
@@ -67,7 +67,7 @@ export default function AboutPage() {
                                         Headquarters / 司令部
                                     </h3>
 
-                                    <div className="space-y-4">
+                                    <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
 
                                         {/* 司令员 */}
                                         <div className="rounded-lg border border-slate-700/70 bg-slate-900/40 p-4">
@@ -116,7 +116,7 @@ export default function AboutPage() {
                                         General Staff Department / 总参谋部
                                     </h3>
 
-                                    <div className="space-y-4">
+                                    <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
                                         {/* 参谋长 */}
                                         <div className="rounded-lg border border-slate-700/70 bg-slate-900/40 p-4">
                                             <h4 className="font-semibold text-sky-300 text-sm uppercase tracking-widest">
@@ -136,27 +136,27 @@ export default function AboutPage() {
                                             </p>
                                         </div>
 
+                                        {/* 军民协调员 */}
+                                        <div className="rounded-lg border border-slate-700/70 bg-slate-900/40 p-4">
+                                            <h4 className="font-semibold text-sky-300 text-sm uppercase tracking-widest">
+                                                Coordination Officer / 军民协调员
+                                            </h4>
+                                            <p className="mt-1 font-medium">Jingyuan Yin</p>
+                                            <p className="text-xs text-slate-400">
+                                                <a className="underline" href="mailto:coordination@vplaaf.org">
+                                                    coordination@vplaaf.org
+                                                </a>
+                                            </p>
+                                            <p className="text-sm text-slate-400">
+                                                Coordinates with civil aviation and ensures compatibility with VATSIM systems.
+                                            </p>
+                                            <p className="text-sm text-slate-400">
+                                                负责与民航单位协调，确保组织活动与 VATSIM 环境兼容。
+                                            </p>
+                                        </div>
                                     </div>
-
-                                    <div className="rounded-lg border border-slate-700/70 bg-slate-900/40 p-4">
-                                        <h4 className="font-semibold text-sky-300 text-sm uppercase tracking-widest">
-                                            Coordination Officer / 军民协调员
-                                        </h4>
-                                        <p className="mt-1 font-medium">Jingyuan Yin</p>
-                                        <p className="text-xs text-slate-400">
-                                            <a className="underline" href="mailto:coordination@vplaaf.org">
-                                                coordination@vplaaf.org
-                                            </a>
-                                        </p>
-                                        <p className="text-sm text-slate-400">
-                                            Coordinates with civil aviation and ensures compatibility with VATSIM systems.
-                                        </p>
-                                        <p className="text-sm text-slate-400">
-                                            负责与民航单位协调，确保组织活动与 VATSIM 环境兼容。
-                                        </p>
-                                    </div>
-
                                 </div>
+
 
                                 {/* 飞训作战部 */}
                                 <div className="space-y-3">
@@ -190,44 +190,45 @@ export default function AboutPage() {
                                         Organization Department / 组织部
                                     </h3>
 
-                                    <div className="rounded-lg border border-slate-700/70 bg-slate-900/40 p-4">
-                                        <h4 className="font-semibold text-sky-300 text-sm uppercase tracking-widest">
-                                            Director of Organization / 组织部部长
-                                        </h4>
-                                        <p className="mt-1 font-medium">Steven Zhang</p>
-                                        <p className="text-xs text-slate-400">
-                                            <a className="underline" href="mailto:public@vplaaf.org">
-                                                public@vplaaf.org
-                                            </a>
-                                        </p>
-                                        <p className="text-sm text-slate-400">
-                                            Manages public-facing information, media materials, and communication channels.
-                                        </p>
-                                        <p className="text-sm text-slate-400">
-                                            负责对外信息发布、宣传素材制作与公共沟通渠道维护。
-                                        </p>
+                                    <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+                                        <div className="rounded-lg border border-slate-700/70 bg-slate-900/40 p-4">
+                                            <h4 className="font-semibold text-sky-300 text-sm uppercase tracking-widest">
+                                                Director of Organization / 组织部部长
+                                            </h4>
+                                            <p className="mt-1 font-medium">Steven Zhang</p>
+                                            <p className="text-xs text-slate-400">
+                                                <a className="underline" href="mailto:public@vplaaf.org">
+                                                    public@vplaaf.org
+                                                </a>
+                                            </p>
+                                            <p className="text-sm text-slate-400">
+                                                Manages public-facing information, media materials, and communication channels.
+                                            </p>
+                                            <p className="text-sm text-slate-400">
+                                                负责对外信息发布、宣传素材制作与公共沟通渠道维护。
+                                            </p>
+                                        </div>
+
+
+                                        {/* 人事主管 */}
+                                        <div className="rounded-lg border border-slate-700/70 bg-slate-900/40 p-4">
+                                            <h4 className="font-semibold text-sky-300 text-sm uppercase tracking-widest">
+                                                Personnel Officer / 人事主管
+                                            </h4>
+                                            <p className="mt-1 font-medium">Haoyu Wu</p>
+                                            <p className="text-xs text-slate-400">
+                                                <a className="underline" href="mailto:apply@vplaaf.org">
+                                                    apply@vplaaf.org
+                                                </a>
+                                            </p>
+                                            <p className="text-sm text-slate-400">
+                                                Manages member recruitment and records.
+                                            </p>
+                                            <p className="text-sm text-slate-400">
+                                                负责成员招募、档案管理。
+                                            </p>
+                                        </div>
                                     </div>
-
-
-                                    {/* 人事主管 */}
-                                    <div className="rounded-lg border border-slate-700/70 bg-slate-900/40 p-4">
-                                        <h4 className="font-semibold text-sky-300 text-sm uppercase tracking-widest">
-                                            Personnel Officer / 人事主管
-                                        </h4>
-                                        <p className="mt-1 font-medium">Haoyu Wu</p>
-                                        <p className="text-xs text-slate-400">
-                                            <a className="underline" href="mailto:apply@vplaaf.org">
-                                                apply@vplaaf.org
-                                            </a>
-                                        </p>
-                                        <p className="text-sm text-slate-400">
-                                            Manages member recruitment and records.
-                                        </p>
-                                        <p className="text-sm text-slate-400">
-                                            负责成员招募、档案管理。
-                                        </p>
-                                    </div>
-
                                 </div>
 
 
@@ -258,9 +259,9 @@ export default function AboutPage() {
                                 </div>
 
 
+                                </div>
                             </div>
                         </div>
-                    </section>
                 </main>
 
                 <MainFooter />
