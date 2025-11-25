@@ -115,7 +115,7 @@ export default function FleetPage() {
                                             Su-30
                                         </h3>
                                         <p className="text-xs text-slate-400 mb-1">
-                                            Air Superiority Fighter · 空优战斗机
+                                            Multirole combat aircraft · 多用途战斗机
                                         </p>
                                         <dl className="mt-1 space-y-1 text-sm sm:text-sm text-slate-300">
                                             <div className="flex gap-2">
@@ -143,7 +143,7 @@ export default function FleetPage() {
                                             J-10
                                         </h3>
                                         <p className="text-xs text-slate-400 mb-1">
-                                            Air Superiority Fighter · 空优战斗机
+                                            Multirole combat aircraft · 多用途战斗机
                                         </p>
                                         <dl className="mt-1 space-y-1 text-sm sm:text-sm text-slate-300">
                                             <div className="flex gap-2">
