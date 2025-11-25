@@ -5,7 +5,7 @@ import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
 
 const MEMBERS_MD_URL =
-    "https://www.vplaaf.org/docs/members/roaster.md"; // TODO: 换成你的 markdown 链接
+    "https://www.vplaaf.org/docs/members/roster.md";
 
 export default async function MembersPage() {
     const res = await fetch(MEMBERS_MD_URL, {
@@ -14,7 +14,6 @@ export default async function MembersPage() {
     });
 
     if (!res.ok) {
-        // 也可以换成更优雅的错误 UI
         throw new Error("Failed to load members markdown");
     }
 
