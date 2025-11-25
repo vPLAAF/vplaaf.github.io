@@ -60,16 +60,6 @@ export default function MainHeader() {
                         </Button>
                     </Link>
 
-                    <Link href="/members">
-                        <Button
-                            variant="ghost"
-                            size="sm"
-                            className="h-full rounded-md px-4 text-sm text-slate-200 hover:bg-slate-800/80 hover:text-sky-300"
-                        >
-                            Members | 成员
-                        </Button>
-                    </Link>
-
                     <Link href="/joinus">
                         <Button
                             variant="ghost"
@@ -88,7 +78,7 @@ export default function MainHeader() {
                                 size="sm"
                                 className="h-full rounded-md px-4 text-sm text-slate-200 hover:bg-slate-800/80 hover:text-sky-300 inline-flex items-center gap-1"
                             >
-                                Rules | 规则
+                                Operations | 运行
                                 <span className="text-[10px]">▾</span>
                             </Button>
                         </DropdownMenuTrigger>
@@ -96,6 +86,22 @@ export default function MainHeader() {
                             align="end"
                             className="min-w-[180px] border-slate-800 bg-slate-950 text-sm text-slate-200"
                         >
+
+                            <Link href="/members">
+                                <DropdownMenuItem className="text-slate-200 hover:bg-slate-800/80">
+                                    Members | 成员
+                                </DropdownMenuItem>
+                            </Link>
+
+                            <Link href="/fleet">
+                                <DropdownMenuItem className="text-slate-200 hover:bg-slate-800/80">
+                                    Fleet | 机队
+                                </DropdownMenuItem>
+                            </Link>
+
+                            <DropdownMenuSeparator className="bg-slate-500 w-7/8 mx-auto" />
+
+
                             <Link href="/sop">
                             <DropdownMenuItem className="text-slate-200 hover:bg-slate-800/80">
                                 SOP | 标准运行程序
@@ -164,14 +170,6 @@ export default function MainHeader() {
                             </Button>
                             </Link>
 
-                            <Link href="/members">
-                            <Button
-                                variant="ghost"
-                                className="flex w-full justify-start rounded-md px-3 py-2 text-slate-200 hover:bg-slate-800/80"
-                            >
-                                Members | 成员
-                            </Button>
-                            </Link>
 
                             <Link href="/joinus">
                             <Button
@@ -189,7 +187,7 @@ export default function MainHeader() {
                                     onClick={() => setMobileAboutOpen((v) => !v)}
                                     className="flex w-full items-center justify-between rounded-md px-3 py-2 text-left text-slate-200 hover:bg-slate-800/80"
                                 >
-                                    <span className="text-xs">Rules | 规则</span>
+                                    <span className="text-xs">Operations | 运行</span>
                                     <span className="text-[10px]">
                     {mobileAboutOpen ? "▴" : "▾"}
                   </span>
@@ -197,6 +195,23 @@ export default function MainHeader() {
 
                                 {mobileAboutOpen && (
                                     <div className="mt-1 space-y-1 pl-3">
+
+                                        <Link href="/members">
+                                            <Button
+                                                variant="ghost"
+                                                className="flex w-full justify-start rounded-md px-3 py-1.5 text-xs text-slate-200 hover:bg-slate-800/80"
+                                            >
+                                                Members | 成员
+                                            </Button>
+                                        </Link>
+                                        <Link href="/fleet">
+                                            <Button
+                                                variant="ghost"
+                                                className="flex w-full justify-start rounded-md px-3 py-1.5 text-xs text-slate-200 hover:bg-slate-800/80"
+                                            >
+                                                Fleet | 机队
+                                            </Button>
+                                        </Link>
 
                                         <Link href="/sop">
                                         <Button
