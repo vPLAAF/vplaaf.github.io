@@ -27,7 +27,7 @@ export default function HomePage() {
 
                 <MainHeader />
 
-                <main className="mx-auto flex min-h-screen max-w-6xl flex-col px-4 pb-20 pt-20 sm:px-6 lg:px-8">
+                <main className="mx-auto flex min-h-[calc(100vh-150px)] max-w-6xl flex-col px-4 pb-20 pt-20 sm:px-6 lg:px-8">
                     <section className="flex flex-1 items-center">
                         <div className="max-w-2xl space-y-6 rounded-2xl bg-slate-950/40 p-6 shadow-[0_0_80px_rgba(15,23,42,0.85)] ring-1 ring-slate-800/70">
                             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-sky-300">
@@ -100,9 +100,10 @@ export default function HomePage() {
                         </div>
                     </section>
 
-                    <MainFooter />
 
                 </main>
+
+                <MainFooter />
             </div>
         </div>
     );
