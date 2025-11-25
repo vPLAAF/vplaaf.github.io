@@ -60,7 +60,7 @@ export default function JoinUsPage() {
                                     </li>
                                     <li>
                                         <p>
-                                            Be fluent in English and Mandarin for communications,
+                                            Fluent English and Mandarin radiotelephony proficiency,
                                             capable of comprehending and accurately executing ATC instructions.
                                         </p>
                                         <p>

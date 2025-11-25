@@ -31,7 +31,7 @@ export default function HomePage() {
                     <section className="flex flex-1 items-center">
                         <div className="max-w-2xl space-y-6 rounded-2xl bg-slate-950/40 p-6 shadow-[0_0_80px_rgba(15,23,42,0.85)] ring-1 ring-slate-800/70">
                             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-sky-300">
-                                VATSIM SPECIAL OPERATIONS AFFILIATE (APPLYING)
+                                VATSIM SPECIAL OPERATIONS ASSOCIATION (APPLYING)
                             </p>
 
                             <h1 className="text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl">

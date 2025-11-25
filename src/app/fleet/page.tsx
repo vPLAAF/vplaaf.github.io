@@ -120,7 +120,7 @@ export default function FleetPage() {
                                         <dl className="mt-1 space-y-1 text-sm sm:text-sm text-slate-300">
                                             <div className="flex gap-2">
                                                 <dt className="w-20 shrink-0 text-slate-400">Platforms</dt>
-                                                <dd>MSFS / X-Plane / P3D </dd>
+                                                <dd>X-Plane / P3D </dd>
                                             </div>
                                             <div className="flex gap-2">
                                                 <dt className="w-20 shrink-0 text-slate-400">VATSIM</dt>
