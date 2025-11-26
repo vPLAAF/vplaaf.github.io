@@ -35,7 +35,7 @@ export default function HomePage() {
                             </p>
 
                             <h1 className="text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl">
-                                vPLAAF · 虚拟中国空军
+                                vPLAAF | 虚拟中国空军
                             </h1>
 
 

@@ -68,7 +68,7 @@ export default function FleetPage() {
 
                         {/* ========== 歼击机部队 ========== */}
                         <h2 className="text-3xl mt-8 font-bold mb-4 text-center tracking-wide text-sky-300">
-                            Fighter Wing · 歼击机部队
+                            Fighter Wing | 歼击机部队
                         </h2>
                         <div className="mt-4 rounded-xl border border-slate-800 bg-slate-900/80 p-4">
                             {/* 一行两架：网格 + 侧边图片布局 */}

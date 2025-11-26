@@ -55,7 +55,7 @@ export default function AboutPage() {
                         </div>
 
                         <h2 className="text-3xl mt-5 font-bold mb-5 text-center tracking-wide text-sky-300">
-                            Organization &amp; Staff · 组织架构与职员
+                            Organization &amp; Staff | 组织架构与职员
                         </h2>
                         <div className="mt-4 rounded-xl border border-slate-800 bg-slate-900/80 p-4">
                             {/* 组织架构 */}

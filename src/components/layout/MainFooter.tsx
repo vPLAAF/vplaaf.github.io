@@ -6,11 +6,13 @@ export default function MainFooter() {
             <div className="mx-auto flex max-w-6xl flex-col items-center justify-between sm:flex-row">
 
                 <div className="flex items-center gap-3">
-                    <img
-                        src="/imgs/vatsimlogo.png"
-                        alt="VATSIM Logo"
-                        className="h-20 opacity-80"
-                    />
+                    <Link href="https://www.vatsim.net">
+                        <img
+                            src="/imgs/vatsimlogo.png"
+                            alt="VATSIM Logo"
+                            className="h-20 opacity-80"
+                        />
+                    </Link>
                 </div>
 
                 <div className="text-center leading-relaxed sm:text-center">
@@ -37,11 +39,13 @@ export default function MainFooter() {
 
                 <div className="flex items-center gap-3">
 
-                    <img
-                        src="/imgs/specopslogo.png"
-                        alt="VSOA Logo"
-                        className="h-16 opacity-80"
-                    />
+                    <Link href="https://www.vatsim.net">
+                        <img
+                            src="/imgs/specopslogo.png"
+                            alt="VSOA Logo"
+                            className="h-16 opacity-80"
+                        />
+                    </Link>
                 </div>
             </div>
         </footer>
