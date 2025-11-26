@@ -20,8 +20,8 @@ const LOAS: LoaConfig[] = [
     },
     {
         id: "loa-hkvacc",
-        nameEn: "LOA with HKvACC",
-        nameZh: "与 HKvACC 协议书",
+        nameEn: "LOA with HK vACC, VATSEA",
+        nameZh: "与 HK vACC, VATSEA 协议书",
         url: "https://www.vplaaf.org/docs/loa/hkvacc.md",
     },
     // 按需继续添加……
