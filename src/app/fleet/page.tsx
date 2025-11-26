@@ -232,7 +232,7 @@ export default function FleetPage() {
                                 <div className="flex flex-col sm:flex-row rounded-lg border border-slate-700/70 bg-slate-900/70 p-4 gap-4">
                                     <div className="sm:w-60 shrink-0">
                                         <img
-                                            src="/imgs/fleet/mi171.png"
+                                            src="/imgs/fleet/mi171.jpg"
                                             className="w-full h-full rounded-md border border-slate-700/60 bg-slate-950/80 object-cover aspect-[16/9]"
                                         />
                                     </div>
