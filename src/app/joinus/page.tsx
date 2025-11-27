@@ -69,10 +69,10 @@ export default function JoinUsPage() {
                                     </li>
                                     <li>
                                         <p>
-                                            Experienced in flight simulation on VATSIM and willing to undergo relevant specialised flight training and assessment.
+                                            Experienced in flight simulation on VATSIM with at least 500 hours of logged flight time, and willing to undergo relevant specialised flight training and assessment.
                                         </p>
                                         <p>
-                                            在VATSIM具备熟练的飞行模拟经验，并且愿意接受相应特殊飞行培训和考核
+                                            在 VATSIM 拥有至少 500 小时的有效飞行时长，并具备成熟的飞行模拟经验，且愿意接受相应的专项飞行培训与考核。
                                         </p>
                                     </li>
                                     <li>
