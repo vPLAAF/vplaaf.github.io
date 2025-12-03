@@ -39,12 +39,12 @@ export default function HomePage() {
                             </h1>
 
 
-                            <p className="text-xs leading-relaxed text-slate-300 sm:text-sm">
-                                当前网站处于建造阶段，
-                                成员系统、招募页面、标准作业程序等内容正在逐步完善中。
-                                <br/>
-                                The website is currently under construction
-                            </p>
+                            {/*<p className="text-xs leading-relaxed text-slate-300 sm:text-sm">*/}
+                            {/*    当前网站处于建造阶段，*/}
+                            {/*    成员系统、招募页面、标准作业程序等内容正在逐步完善中。*/}
+                            {/*    <br/>*/}
+                            {/*    The website is currently under construction*/}
+                            {/*</p>*/}
 
                             {/* 加入我们按钮 */}
                             {/* 按钮组：居中，预留以后加更多按钮 */}
