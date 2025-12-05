@@ -64,7 +64,7 @@ export default function AboutPage() {
                                 {/* 司令部 */}
                                 <div className="space-y-3">
                                     <h3 className="text-xs font-semibold uppercase tracking-[0.25em] text-sky-300">
-                                        Headquarters / 司令部
+                                        Headquarters | 司令部
                                     </h3>
 
                                     <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
@@ -72,7 +72,7 @@ export default function AboutPage() {
                                         {/* 司令员 */}
                                         <div className="rounded-lg border border-slate-700/70 bg-slate-900/40 p-4">
                                             <h4 className="font-semibold text-sky-300 text-sm uppercase tracking-widest">
-                                                Commander / 司令员
+                                                Commander | 司令员
                                             </h4>
                                             <p className="mt-1 font-medium">Lihan Bao</p>
                                             <p className="text-xs text-slate-400">
@@ -92,7 +92,7 @@ export default function AboutPage() {
                                         {/* 副司令员 */}
                                         <div className="rounded-lg border border-slate-700/70 bg-slate-900/40 p-4">
                                             <h4 className="font-semibold text-sky-300 text-sm uppercase tracking-widest">
-                                                Deputy Commander / 副司令员
+                                                Deputy Commander | 副司令员
                                             </h4>
                                             <p className="mt-1 font-medium">Xinrui Wan</p>
                                             <p className="text-xs text-slate-400">
@@ -113,14 +113,14 @@ export default function AboutPage() {
                                 {/* 参谋部 */}
                                 <div className="space-y-3">
                                     <h3 className="text-xs font-semibold uppercase tracking-[0.25em] text-sky-300">
-                                        General Staff Department / 总参谋部
+                                        General Staff Department | 总参谋部
                                     </h3>
 
                                     <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
                                         {/* 参谋长 */}
                                         <div className="rounded-lg border border-slate-700/70 bg-slate-900/40 p-4">
                                             <h4 className="font-semibold text-sky-300 text-sm uppercase tracking-widest">
-                                                Chief of Staff / 参谋长
+                                                Chief of Staff | 参谋长
                                             </h4>
                                             <p className="mt-1 font-medium">Jiashu Ye</p>
                                             <p className="text-xs text-slate-400">
@@ -139,7 +139,7 @@ export default function AboutPage() {
                                         {/* 军民协调员 */}
                                         <div className="rounded-lg border border-slate-700/70 bg-slate-900/40 p-4">
                                             <h4 className="font-semibold text-sky-300 text-sm uppercase tracking-widest">
-                                                Coordination Officer / 军民协调员
+                                                Coordination Officer | 军民协调员
                                             </h4>
                                             <p className="mt-1 font-medium">Jingyuan Yin</p>
                                             <p className="text-xs text-slate-400">
@@ -161,12 +161,12 @@ export default function AboutPage() {
                                 {/* 飞训作战部 */}
                                 <div className="space-y-3">
                                     <h3 className="text-xs font-semibold uppercase tracking-[0.25em] text-sky-300">
-                                        Air Operations and Training / 飞训作战部
+                                        Air Operations and Training | 飞训作战部
                                     </h3>
 
                                     <div className="rounded-lg border border-slate-700/70 bg-slate-900/40 p-4">
                                         <h4 className="font-semibold text-sky-300 text-sm uppercase tracking-widest">
-                                            Director of Operations / 飞训作战部长
+                                            Director of Operations | 飞训作战部部长
                                         </h4>
                                         <p className="mt-1 font-medium">Tony Lin</p>
                                         <p className="text-xs text-slate-400">
@@ -187,13 +187,13 @@ export default function AboutPage() {
                                 {/* 组织部 */}
                                 <div className="space-y-3">
                                     <h3 className="text-xs font-semibold uppercase tracking-[0.25em] text-sky-300">
-                                        Organization Department / 组织部
+                                        Organization Department | 组织部
                                     </h3>
 
                                     <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
                                         <div className="rounded-lg border border-slate-700/70 bg-slate-900/40 p-4">
                                             <h4 className="font-semibold text-sky-300 text-sm uppercase tracking-widest">
-                                                Director of Organization / 组织部部长
+                                                Director of Organization | 组织部部长
                                             </h4>
                                             <p className="mt-1 font-medium">Steven Zhang</p>
                                             <p className="text-xs text-slate-400">
@@ -213,7 +213,7 @@ export default function AboutPage() {
                                         {/* 人事主管 */}
                                         <div className="rounded-lg border border-slate-700/70 bg-slate-900/40 p-4">
                                             <h4 className="font-semibold text-sky-300 text-sm uppercase tracking-widest">
-                                                Personnel Officer / 人事主管
+                                                Personnel Officer | 人事主管
                                             </h4>
                                             <p className="mt-1 font-medium">Haoyu Wu</p>
                                             <p className="text-xs text-slate-400">
@@ -235,12 +235,12 @@ export default function AboutPage() {
                                 {/* 后勤部 */}
                                 <div className="space-y-3">
                                     <h3 className="text-xs font-semibold uppercase tracking-[0.25em] text-sky-300">
-                                        Logistics Department / 后勤部
+                                        Logistics Department | 后勤部
                                     </h3>
 
                                     <div className="rounded-lg border border-slate-700/70 bg-slate-900/40 p-4">
                                         <h4 className="font-semibold text-sky-300 text-sm uppercase tracking-widest">
-                                            Director of Logistics / 后勤部部长
+                                            Director of Logistics | 后勤部部长
                                         </h4>
                                         <p className="mt-1 font-medium">Xinrui Wan</p>
                                         <p className="text-xs text-slate-400">
