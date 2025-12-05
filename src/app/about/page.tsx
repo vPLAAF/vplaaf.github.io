@@ -33,7 +33,7 @@ export default function AboutPage() {
                             {/* 概况介绍 */}
                             <div className="space-y-3 text-sm leading-relaxed text-slate-300 sm:text-base">
                                 <p>
-                                    vPLAAF (virtual People&apos;s Liberation Army Air Force) is a fully fictional
+                                    vPLAAF is a fully fictional
                                     virtual military aviation organization operating on the VATSIM network.
                                     We provide a structured, SOP-driven environment for simulated military-style
                                     aviation activities while strictly complying with VATSIM and VSOA policies.
