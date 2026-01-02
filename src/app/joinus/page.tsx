@@ -92,6 +92,14 @@ export default function JoinUsPage() {
                                             明确理解并接受：加入 vPLAAF 不赋予任何现实军人身份或相关权利。
                                         </p>
                                     </li>
+                                    <li>
+                                        <p>
+                                            By applying to join vPLAAF, you acknowledge that you have read, understood, and agree to the vPLAAF Privacy Policy.
+                                        </p>
+                                        <p>
+                                            申请加入 vPLAAF 即表示你已阅读、理解并同意 vPLAAF 隐私政策。
+                                        </p>
+                                    </li>
                                 </ul>
                         </div>
 
