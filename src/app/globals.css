@@ -217,3 +217,25 @@
     @apply align-middle;
 }
 
+/* 行内代码 */
+.markdown-body code {
+    @apply font-mono text-sm px-1 py-0.5 rounded
+    bg-slate-800 text-sky-300;
+}
+
+/* 代码块容器 */
+.markdown-body pre {
+    @apply my-4 p-4 rounded-md overflow-x-auto
+    bg-slate-900 border border-slate-700;
+}
+
+/* 代码块内部代码 */
+.markdown-body pre code {
+    @apply block font-mono text-sm leading-relaxed
+    text-slate-200 bg-transparent p-0;
+}
+
+/* 去掉某些 Markdown 渲染器给 code 再套背景的情况 */
+.markdown-body pre code span {
+    @apply bg-transparent;
+}

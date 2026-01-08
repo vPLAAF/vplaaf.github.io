@@ -108,6 +108,12 @@ export default function MainHeader() {
                             </DropdownMenuItem>
                             </Link>
 
+                            <Link href="/training">
+                                <DropdownMenuItem className="text-slate-200 hover:bg-slate-800/80">
+                                    Training Syllabus | 训练大纲
+                                </DropdownMenuItem>
+                            </Link>
+
                             <Link href="/loas">
                             <DropdownMenuItem className="text-slate-200 hover:bg-slate-800/80">
                                 LOAs | 协议书
@@ -220,6 +226,15 @@ export default function MainHeader() {
                                         >
                                             SOP | 标准运行程序
                                         </Button>
+                                        </Link>
+
+                                        <Link href="/training">
+                                            <Button
+                                                variant="ghost"
+                                                className="flex w-full justify-start rounded-md px-3 py-1.5 text-xs text-slate-200 hover:bg-slate-800/80"
+                                            >
+                                                Training Syllabus | 训练大纲
+                                            </Button>
                                         </Link>
 
                                         <Link href="/loas">
