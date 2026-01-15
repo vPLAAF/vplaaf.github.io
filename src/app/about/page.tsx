@@ -170,8 +170,8 @@ export default function AboutPage() {
                                         </h4>
                                         <p className="mt-1 font-medium">Tony Lin</p>
                                         <p className="text-xs text-slate-400">
-                                            <a className="underline" href="mailto:operation@vplaaf.org">
-                                                operation@vplaaf.org
+                                            <a className="underline" href="mailto:twinact4099@gmail.com">
+                                                twinact4099@gmail.com
                                             </a>
                                         </p>
                                         <p className="text-sm text-slate-400">
@@ -197,8 +197,8 @@ export default function AboutPage() {
                                             </h4>
                                             <p className="mt-1 font-medium">Steven Zhang</p>
                                             <p className="text-xs text-slate-400">
-                                                <a className="underline" href="mailto:public@vplaaf.org">
-                                                    public@vplaaf.org
+                                                <a className="underline" href="">
+
                                                 </a>
                                             </p>
                                             <p className="text-sm text-slate-400">
