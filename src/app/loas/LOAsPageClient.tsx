@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 type LoaConfig = {
     id: string;
@@ -132,8 +133,8 @@ export default function LOAsPage() {
                                 </div>
                             )}
 
-                            <article className="prose prose-slate prose-invert max-w-none bg-slate-900/80 border border-slate-800 rounded-xl p-4">
-                                <ReactMarkdown>{markdown}</ReactMarkdown>
+                            <article className="markdown-body prose prose-slate prose-invert max-w-none bg-slate-900/80 border border-slate-800 rounded-xl p-4">
+                                <ReactMarkdown remarkPlugins={[remarkGfm]}>{markdown}</ReactMarkdown>
                             </article>
                         </>
                     )}
