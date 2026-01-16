@@ -134,7 +134,7 @@ export default function LOAsPage() {
                                 </div>
                             )}
 
-                            <article className="markdown-body prose prose-slate prose-invert max-w-none bg-slate-900/80 border border-slate-800 rounded-xl p-4 max-h-[60vh] overflow-auto pr-2">
+                            <article className="markdown-body prose prose-slate prose-invert max-w-none bg-slate-900/80 border border-slate-800 rounded-xl p-4 max-h-[70vh] overflow-auto pr-2">
                                 <ReactMarkdown remarkPlugins={[remarkGfm, remarkAlert]}>{markdown}</ReactMarkdown>
                             </article>
                         </>
