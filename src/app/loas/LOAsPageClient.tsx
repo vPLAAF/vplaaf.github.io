@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import { remarkAlert } from 'remark-github-blockquote-alert'
 
 type LoaConfig = {
     id: string;
@@ -133,8 +134,8 @@ export default function LOAsPage() {
                                 </div>
                             )}
 
-                            <article className="markdown-body prose prose-slate prose-invert max-w-none bg-slate-900/80 border border-slate-800 rounded-xl p-4">
-                                <ReactMarkdown remarkPlugins={[remarkGfm]}>{markdown}</ReactMarkdown>
+                            <article className="markdown-body prose prose-slate prose-invert max-w-none bg-slate-900/80 border border-slate-800 rounded-xl p-4 max-h-[60vh] overflow-auto pr-2">
+                                <ReactMarkdown remarkPlugins={[remarkGfm, remarkAlert]}>{markdown}</ReactMarkdown>
                             </article>
                         </>
                     )}
