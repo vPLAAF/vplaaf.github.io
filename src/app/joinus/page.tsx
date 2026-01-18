@@ -147,7 +147,7 @@ export default function JoinUsPage() {
                                 </div>
 
                                 {/* Apply button */}
-                                <div className="pt-2 flex justify-center">
+                                <div className="pt-2 gap-4 flex justify-center">
                                     <a href="mailto:apply@vplaaf.org?subject=vPLAAF%20Application">
                                         <Button
                                             className="
@@ -169,6 +169,29 @@ export default function JoinUsPage() {
                                             "
                                         >
                                             Apply via Email | 邮件申请
+                                        </Button>
+                                    </a>
+                                    <a href="https://discord.gg/WjMmmRbDaR">
+                                        <Button
+                                            className="
+                                                rounded-lg
+                                                bg-sky-500/90
+                                                hover:bg-sky-400
+                                                text-white
+                                                px-6
+                                                py-2
+                                                text-sm
+                                                font-medium
+                                                transform
+                                                transition
+                                                duration-200
+                                                ease-out
+                                                hover:scale-105
+                                                hover:-translate-y-[1px]
+                                                hover:shadow-[0_0_30px_rgba(56,189,248,0.7)]
+                                            "
+                                        >
+                                            Join Discord | 加入Discord
                                         </Button>
                                     </a>
                                 </div>

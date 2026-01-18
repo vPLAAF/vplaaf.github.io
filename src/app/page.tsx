@@ -49,6 +49,30 @@ export default function HomePage() {
                             {/* 加入我们按钮 */}
                             {/* 按钮组：居中，预留以后加更多按钮 */}
                             <div className="mt-6 flex justify-center gap-4">
+                                <Link href="https://discord.gg/WjMmmRbDaR">
+                                    <Button
+                                        className="
+                                            rounded-lg
+                                            bg-sky-500/90
+                                            hover:bg-sky-400
+                                            text-white
+                                            px-6
+                                            py-2
+                                            text-sm
+                                            font-medium
+                                            transform
+                                            transition
+                                            duration-200
+                                            ease-out
+                                            hover:scale-105
+                                            hover:-translate-y-[1px]
+                                            hover:shadow-[0_0_30px_rgba(56,189,248,0.7)]
+                                            animate-pulse-glow
+      "
+                                    >
+                                        Join Discord | 加入Discord
+                                    </Button>
+                                </Link>
                                 <Link href="/joinus">
                                     <Button
                                         className="
@@ -70,7 +94,7 @@ export default function HomePage() {
                                             animate-pulse-glow
       "
                                     >
-                                        Join us | 加入我们
+                                        Apply membership | 申请加入
                                     </Button>
                                 </Link>
                             </div>
