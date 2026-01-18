@@ -49,7 +49,7 @@ export default function HomePage() {
                             {/* 加入我们按钮 */}
                             {/* 按钮组：居中，预留以后加更多按钮 */}
                             <div className="mt-6 flex justify-center gap-4">
-                                <Link href="https://discord.gg/WjMmmRbDaR">
+                                <Link href="https://discord.gg/BAqJVuuWxv">
                                     <Button
                                         className="
                                             rounded-lg
