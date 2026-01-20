@@ -1,7 +1,11 @@
 import MainHeader from "@/components/layout/MainHeader";
 import MainFooter from "@/components/layout/MainFooter";
 import Link from "next/link";
-
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+    title: "关于我们 | About us",
+    description: "虚拟中国空军官网",
+};
 export default function AboutPage() {
     return (
         <div className="relative min-h-screen bg-blue-400/60 text-slate-100 overflow-hidden">

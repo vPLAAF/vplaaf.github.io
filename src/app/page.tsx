@@ -5,6 +5,12 @@ import MainFooter from "@/components/layout/MainFooter";
 import Link from "next/link";
 import {Button} from "@/components/ui/button";
 
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+    title: "vPLAAF | 虚拟中国空军",
+    description: "虚拟中国空军官网",
+};
+
 export default function HomePage() {
     return (
         <div className="relative min-h-screen bg-black text-slate-100 overflow-hidden">

@@ -2,7 +2,11 @@ import SOPPageClient from './SOPPageClient';
 
 import MainHeader from "@/components/layout/MainHeader";
 import MainFooter from "@/components/layout/MainFooter";
-
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+    title: "标准运行程序 | SOP",
+    description: "虚拟中国空军官网",
+};
 export default function SOPPage() {
     return (
         <div className="min-h-screen flex flex-col bg-slate-950">

@@ -3,7 +3,11 @@
 import MainHeader from "@/components/layout/MainHeader";
 import MainFooter from "@/components/layout/MainFooter";
 import { Button } from "@/components/ui/button";
-
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+    title: "加入我们 | Join Us",
+    description: "虚拟中国空军官网",
+};
 export default function JoinUsPage() {
     return (
         <div className="relative min-h-screen bg-black text-slate-100 overflow-hidden">

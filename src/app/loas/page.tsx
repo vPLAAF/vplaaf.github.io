@@ -2,6 +2,11 @@ import LOAsPageClient from './LOAsPageClient';
 
 import MainHeader from "@/components/layout/MainHeader";
 import MainFooter from "@/components/layout/MainFooter";
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+    title: "协议书 | Letters of Agreement",
+    description: "虚拟中国空军官网",
+};
 
 export default function SOPPage() {
     return (

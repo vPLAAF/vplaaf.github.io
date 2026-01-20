@@ -13,10 +13,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "vPLAAF | 虚拟中国空军",
-  description: "虚拟中国空军官网",
-};
+
 
 export default function RootLayout({
   children,

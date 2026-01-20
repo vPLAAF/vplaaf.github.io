@@ -1,6 +1,10 @@
 import MainHeader from "@/components/layout/MainHeader";
 import MainFooter from "@/components/layout/MainFooter";
-
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+    title: "机队与平台 | Fleet & Platforms",
+    description: "虚拟中国空军官网",
+};
 export default function FleetPage() {
     return (
         <div className="relative min-h-screen bg-blue-400/60 text-slate-100 overflow-hidden">

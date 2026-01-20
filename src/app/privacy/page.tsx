@@ -2,7 +2,11 @@ import PrivacyPageClient from './PrivacyPageClient';
 
 import MainHeader from "@/components/layout/MainHeader";
 import MainFooter from "@/components/layout/MainFooter";
-
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+    title: "隐私政策 | Privacy Policy",
+    description: "虚拟中国空军官网",
+};
 export default function PrivacyPage() {
   return (
     <div className="min-h-screen flex flex-col bg-slate-950">

@@ -3,7 +3,11 @@ import MainFooter from "@/components/layout/MainFooter";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
-
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+    title: "成员列表 | Roster of Members",
+    description: "虚拟中国空军官网",
+};
 const MEMBERS_MD_URL =
     "https://www.vplaaf.org/docs/members/roster.md";
 

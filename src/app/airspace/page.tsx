@@ -2,6 +2,11 @@ import MainHeader from "@/components/layout/MainHeader";
 import MainFooter from "@/components/layout/MainFooter";
 import AirspaceMapClientWrapper from "./AirspaceMapClientWrapper";
 
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+    title: "空域限制区 | Airspace Areas",
+    description: "虚拟中国空军官网",
+};
 export default function AirspacePage() {
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100">

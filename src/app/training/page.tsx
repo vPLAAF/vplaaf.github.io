@@ -2,7 +2,11 @@ import TrainingPageClient from './TrainingPageClient';
 
 import MainHeader from "@/components/layout/MainHeader";
 import MainFooter from "@/components/layout/MainFooter";
-
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+    title: "训练大纲 | Training Syllabus",
+    description: "虚拟中国空军官网",
+};
 export default function SOPPage() {
     return (
         <div className="min-h-screen flex flex-col bg-slate-950">
