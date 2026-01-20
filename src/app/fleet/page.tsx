@@ -333,6 +333,47 @@ export default function FleetPage() {
 
                             </div>
                         </div>
+
+                        {/* ========== 教练机 ========== */}
+                        <h2 className="text-3xl mt-8 font-bold mb-4 text-center tracking-wide text-sky-300">
+                            Trainer · 教练机
+                        </h2>
+                        <div className="mt-4 rounded-xl border border-slate-800 bg-slate-900/80 p-4">
+                            <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
+
+                                {/*  */}
+                                <div className="flex flex-col sm:flex-row rounded-lg border border-slate-700/70 bg-slate-900/70 p-4 gap-4">
+                                    <div className="sm:w-60 shrink-0">
+                                        <img
+                                            src="/imgs/fleet/l15.png"
+                                            className="w-full h-full rounded-md border border-slate-700/60 bg-slate-950/80 object-cover aspect-[16/9]"
+                                        />
+                                    </div>
+                                    <div className="flex-1">
+                                        <h3 className="text-xl font-semibold tracking-wide text-sky-300">
+                                            L-15
+                                        </h3>
+                                        <p className="text-xs text-slate-400 mb-1">
+                                            Advanced Trainer · 高教机
+                                        </p>
+                                        <dl className="mt-1 space-y-1 text-sm sm:text-sm text-slate-300">
+                                            <div className="flex gap-2">
+                                                <dt className="w-20 shrink-0 text-slate-400">Platforms</dt>
+                                                <dd>MSFS / X-Plane (alt: M-346)</dd>
+                                            </div>
+                                            <div className="flex gap-2">
+                                                <dt className="w-20 shrink-0 text-slate-400">VATSIM</dt>
+                                                <dd>Type Code: L15</dd>
+                                            </div>
+                                        </dl>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+
                     </div>
                 </main>
 
