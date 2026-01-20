@@ -29,7 +29,7 @@ export default function MainHeader() {
             <div className="mx-auto flex h-20 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
                 {/* 左侧 Logo */}
                 <Link href="/" className="flex items-center gap-2">
-                    <div className="flex h-60 w-80 items-center text-[9px] justify-center">
+                    <div className="flex w-80 items-center text-[9px] justify-center">
                         <Image
                             src="https://www.vplaaf.org/docs/logo-pack/logo_standard_500px.png"
                             alt="vPLAAF logo"
@@ -67,6 +67,16 @@ export default function MainHeader() {
                             className="h-full rounded-md px-4 text-sm text-slate-200 hover:bg-slate-800/80 hover:text-sky-300"
                         >
                             Join us | 加入
+                        </Button>
+                    </Link>
+
+                    <Link href="/airspace">
+                        <Button
+                            variant="ghost"
+                            size="sm"
+                            className="h-full rounded-md px-4 text-sm text-slate-200 hover:bg-slate-800/80 hover:text-sky-300"
+                        >
+                            Airspace | 空域
                         </Button>
                     </Link>
 
@@ -184,6 +194,15 @@ export default function MainHeader() {
                             >
                                 Join us | 加入
                             </Button>
+                            </Link>
+
+                            <Link href="/airspace">
+                                <Button
+                                    variant="ghost"
+                                    className="flex w-full justify-start rounded-md px-3 py-2 text-slate-200 hover:bg-slate-800/80"
+                                >
+                                    Airspace | 空域
+                                </Button>
                             </Link>
 
 

@@ -1,0 +1,41 @@
+/* Visual tweaks to make overlays pop over busy basemaps */
+
+/* Dim and slightly desaturate the basemap tiles */
+.airspace-map .leaflet-tile {
+  filter: grayscale(35%) saturate(70%) contrast(105%) brightness(30%);
+}
+
+/* Make tooltips more readable */
+.airspace-map .leaflet-tooltip {
+  background: rgba(2, 6, 23, 0.85); /* slate-950 */
+  color: #e2e8f0; /* slate-200 */
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+
+  /* sizing */
+  padding: 10px 12px;
+  min-width: 220px;
+  max-width: 380px;
+  font-size: 12px;
+  line-height: 1.35;
+
+  /* wrapping */
+  white-space: pre-line; /* respect \n, but still wrap long lines */
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* Constrain Leaflet z-index to prevent blocking header/overlays */
+.airspace-map .leaflet-container {
+  z-index: 10 !important;
+}
+
+/* Ensure Leaflet controls don't stack too high */
+.airspace-map .leaflet-control {
+  z-index: 11 !important;
+}
+
+/* Optional: slightly larger arrow + spacing */
+.airspace-map .leaflet-tooltip:before {
+  border-top-color: rgba(148, 163, 184, 0.35);
+}

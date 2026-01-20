@@ -9,7 +9,6 @@ const MEMBERS_MD_URL =
 
 export default async function MembersPage() {
     const res = await fetch(MEMBERS_MD_URL, {
-        // 根据需要调整缓存策略
         next: { revalidate: 3600 },
     });
 

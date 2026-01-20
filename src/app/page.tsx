@@ -107,13 +107,13 @@ export default function HomePage() {
                     <section className="mt-10">
                         <div className="rounded-xl border border-red-500/40 bg-red-950/40 px-4 py-3 text-xs text-red-100 sm:text-sm">
                             <p className="font-semibold">Important Disclaimer / 重要免责声明 </p>
-                            <p className="mt-2 text-[11px] leading-relaxed sm:text-[10px]">
+                            <p className="mt-2 text-[9px] leading-relaxed sm:text-[10px]">
                                 vPLAAF is an entirely fictional virtual aviation organization created solely for flight simulation and online entertainment.
                                 vPLAAF has no affiliation, subordination, cooperation, or authorization relationship with the real People’s Liberation Army Air Force or with any governmental, military, or commercial entity.
                                 All missions, structures, and designations are fictional and do not represent any real-world military unit, organization, or stance.
                                 All activities conducted by this website and this organization must not be used for any real-world aviation or military purposes, and do not constitute any form of real-world flight training or operational reference.
                             </p>
-                            <p className="mt-2 text-[11px] leading-relaxed sm:text-[10px]">
+                            <p className="mt-2 text-[9px] leading-relaxed sm:text-[10px]">
                                 vPLAAF虚拟中国空军为完全虚构的虚拟飞行组织，
                                 仅以飞行模拟与网络娱乐为目的。vPLAAF 与现实中的中国人民解放军空军、
                                 任何国家机关、军事单位或商业机构不存在任何形式的隶属、从属、合作或授权关系，
