@@ -50,7 +50,7 @@ export default function AirspaceMapClient() {
         const json = (await res.json()) as AirspaceAreasResponse;
         const parsed = parseAreasJson(json, {
           inputCrs: "WGS84",
-          outputCrs: "GCJ02", // Gaode tiles use GCJ02
+          outputCrs: "GCJ02", // Gaode use GCJ02
         });
         if (!cancelled) {
           setAreas(parsed);
@@ -66,7 +66,7 @@ export default function AirspaceMapClient() {
     }
 
     load();
-    const t = setInterval(load, 60_000); // refresh every 1 minute, sync with 张嘚儿
+    const t = setInterval(load, 120_000); // refresh every 1 minute, sync with 张嘚儿
 
     return () => {
       cancelled = true;
@@ -84,6 +84,12 @@ export default function AirspaceMapClient() {
     const danger = areas.filter((a) => String(a.category).toLowerCase().includes("danger")).length;
     return { total: areas.length, prohibit, restricted, danger };
   }, [areas]);
+
+  const dataVersion = useMemo(() => {
+    // Used to force-remount Leaflet vector layers when data refreshes.
+    // Some react-leaflet layers don't reliably apply deep prop updates.
+    return lastUpdated ? lastUpdated.getTime() : 0;
+  }, [lastUpdated]);
 
   const visibleAreas = useMemo(() => {
     return areas.filter((a) => {
@@ -219,7 +225,7 @@ export default function AirspaceMapClient() {
                 if (a.geometry.kind === "polygon") {
                   return (
                     <Polygon
-                      key={a.id}
+                      key={`${a.id}-${dataVersion}`}
                       positions={a.geometry.latlngs as unknown as LatLngExpression[]}
                       {...common}
                     >
@@ -232,7 +238,7 @@ export default function AirspaceMapClient() {
 
                 return (
                   <Circle
-                    key={a.id}
+                    key={`${a.id}-${dataVersion}`}
                     center={a.geometry.center as unknown as LatLngExpression}
                     radius={a.geometry.radiusMeters}
                     {...common}
@@ -251,7 +257,6 @@ export default function AirspaceMapClient() {
         <aside className="flex h-[70vh] flex-col overflow-hidden rounded-xl border border-slate-800 bg-slate-950/30">
           <div className="sticky top-0 z-10 border-b border-slate-800 bg-slate-950/60 px-3 py-2 text-xs text-slate-300 backdrop-blur">
             <div className="font-semibold text-sky-300">Airspace Areas</div>
-            <div className="text-[11px] text-slate-400">Scroll the list. Click an item to pan.</div>
           </div>
 
           <div className="flex-1 overflow-auto p-2 pr-1">
@@ -303,7 +308,7 @@ export default function AirspaceMapClient() {
 
       {error ? (
         <div className="mx-3 mb-3 rounded-md border border-amber-500/60 bg-amber-900/30 px-3 py-2 text-xs text-amber-100">
-          Data fetch failed. The map may be empty. 请检查该域名是否允许 CORS。
+          Data fetch failed. The map may be empty. 请检查 CORS。
         </div>
       ) : null}
     </div>
