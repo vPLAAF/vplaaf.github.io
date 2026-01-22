@@ -239,12 +239,12 @@ export default function AboutPage() {
                                 {/* 后勤部 */}
                                 <div className="space-y-3">
                                     <h3 className="text-xs font-semibold uppercase tracking-[0.25em] text-sky-300">
-                                        Logistics Department | 后勤部
+                                        Tech Department | 后勤部
                                     </h3>
 
                                     <div className="rounded-lg border border-slate-700/70 bg-slate-900/40 p-4">
                                         <h4 className="font-semibold text-sky-300 text-sm uppercase tracking-widest">
-                                            Director of Logistics | 后勤部部长
+                                            Webmaster | 后勤部部长
                                         </h4>
                                         <p className="mt-1 font-medium">Xinrui Wan</p>
                                         <p className="text-xs text-slate-400">
