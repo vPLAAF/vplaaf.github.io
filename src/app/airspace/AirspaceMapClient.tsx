@@ -17,6 +17,7 @@ import {
   type AirspaceArea,
   type AirspaceAreasResponse,
 } from "@/lib/airspace";
+import { loadBoundaries, type BoundaryFeature } from "@/lib/boundaries";
 
 const DATA_URL = "https://airspace.vplaaf.org/Areas.json";
 
@@ -27,6 +28,7 @@ const CHINA_BOUNDS: LatLngBoundsExpression = [
 
 export default function AirspaceMapClient() {
   const [areas, setAreas] = useState<AirspaceArea[]>([]);
+  const [boundaries, setBoundaries] = useState<BoundaryFeature[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [lastUpdated, setLastUpdated] = useState<Date | null>(null);
@@ -43,6 +45,7 @@ export default function AirspaceMapClient() {
       setLoading(true);
       setError(null);
       try {
+        // Load airspace areas
         const res = await fetch(DATA_URL, {
           cache: "no-store",
         });
@@ -55,6 +58,12 @@ export default function AirspaceMapClient() {
         if (!cancelled) {
           setAreas(parsed);
           setLastUpdated(new Date());
+        }
+
+        // Load FIR boundaries
+        const boundaryData = await loadBoundaries();
+        if (!cancelled) {
+          setBoundaries(boundaryData);
         }
       } catch (e) {
         if (!cancelled) {
@@ -193,6 +202,43 @@ export default function AirspaceMapClient() {
                 subdomains="1234"
                 maxZoom={18}
               />
+
+              {/* FIR boundaries (bottom layer, non-interactive) */}
+              {boundaries.map((boundary) => (
+                <Polygon
+                  key={`fir-${boundary.id}`}
+                  positions={boundary.latlngs as unknown as LatLngExpression[]}
+                  pathOptions={{
+                    color: "rgba(100, 180, 180git, 0.8)",
+                    fillColor: "rgba(100, 150, 200, 0.08)",
+                    fillOpacity: 0.08,
+                    weight: 2,
+                    opacity: 0.6,
+                    dashArray: "5, 5",
+                    lineCap: "round",
+                    lineJoin: "round",
+                  }}
+                  eventHandlers={{
+                    click: (e) => e.originalEvent.stopPropagation(),
+                    mousedown: (e) => e.originalEvent.stopPropagation(),
+                  }}
+                  interactive={false}
+                >
+                  <Tooltip
+                    permanent
+                    direction="center"
+                    offset={[0, 0]}
+                    className="fir-label"
+                    opacity={1}
+                  >
+                    <div className="fir-label-text">
+                      <div className="fir-label-icao">{boundary.id}</div>
+                      <div className="fir-label-zh">{boundary.name}</div>
+                      <div className="fir-label-en">{boundary.englishName ?? ""}</div>
+                    </div>
+                  </Tooltip>
+                </Polygon>
+              ))}
 
               {visibleAreas.map((a) => {
                 const color = categoryColor(a.category);
