@@ -209,7 +209,7 @@ export default function AirspaceMapClient() {
                   key={`fir-${boundary.id}`}
                   positions={boundary.latlngs as unknown as LatLngExpression[]}
                   pathOptions={{
-                    color: "rgba(100, 180, 180git, 0.8)",
+                    color: "rgba(100, 180, 180, 0.8)",
                     fillColor: "rgba(100, 150, 200, 0.08)",
                     fillOpacity: 0.08,
                     weight: 2,
