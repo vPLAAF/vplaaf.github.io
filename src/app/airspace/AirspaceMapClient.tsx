@@ -4,7 +4,7 @@ import "leaflet/dist/leaflet.css";
 import "./airspace-map.css";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import { Circle, MapContainer, Polygon, TileLayer, Tooltip } from "react-leaflet";
+import { Circle, MapContainer, Marker, Polygon, TileLayer, Tooltip } from "react-leaflet";
 import type {
   LatLngBoundsExpression,
   LatLngExpression,
@@ -37,6 +37,22 @@ export default function AirspaceMapClient() {
   const [showDanger, setShowDanger] = useState(true);
 
   const mapRef = useRef<LeafletMap | null>(null);
+
+  // Area labels: show only when zoomed in enough.
+  const LABEL_MIN_ZOOM = 7;
+  const [zoom, setZoom] = useState<number>(LABEL_MIN_ZOOM);
+
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!map) return;
+
+    const onZoom = () => setZoom(map.getZoom());
+    onZoom();
+    map.on("zoomend", onZoom);
+    return () => {
+      map.off("zoomend", onZoom);
+    };
+  }, [lastUpdated]);
 
   useEffect(() => {
     let cancelled = false;
@@ -188,12 +204,14 @@ export default function AirspaceMapClient() {
               bounds={CHINA_BOUNDS}
               maxBounds={CHINA_BOUNDS}
               maxBoundsViscosity={1.0}
-              minZoom={5}
-              maxZoom={10}
+              minZoom={4}
+              maxZoom={11}
               scrollWheelZoom
               style={{ height: "100%", width: "100%" }}
               ref={(instance) => {
-                mapRef.current = (instance as unknown as LeafletMap) ?? null;
+                const map = (instance as unknown as LeafletMap) ?? null;
+                mapRef.current = map;
+                if (map) setZoom(map.getZoom());
               }}
             >
               <TileLayer
@@ -220,7 +238,6 @@ export default function AirspaceMapClient() {
                   }}
                   eventHandlers={{
                     click: (e) => e.originalEvent.stopPropagation(),
-                    mousedown: (e) => e.originalEvent.stopPropagation(),
                   }}
                   interactive={false}
                 >
@@ -275,6 +292,7 @@ export default function AirspaceMapClient() {
                       positions={a.geometry.latlngs as unknown as LatLngExpression[]}
                       {...common}
                     >
+                      {/* Hover tooltip (keep existing dark tooltip) */}
                       <Tooltip sticky direction="top" opacity={1}>
                         <span style={{ whiteSpace: "pre-line" }}>{tipText}</span>
                       </Tooltip>
@@ -289,12 +307,72 @@ export default function AirspaceMapClient() {
                     radius={a.geometry.radiusMeters}
                     {...common}
                   >
+                    {/* Hover tooltip (keep existing dark tooltip) */}
                     <Tooltip sticky direction="top" opacity={1}>
                       <span style={{ whiteSpace: "pre-line" }}>{tipText}</span>
                     </Tooltip>
                   </Circle>
                 );
               })}
+
+              {/* Center labels: render as permanent markers so they never follow mouse */}
+              {zoom >= LABEL_MIN_ZOOM
+                ? visibleAreas
+                    .map((a) => {
+                      const color = categoryColor(a.category);
+
+                      const center: LatLngExpression | null =
+                        a.geometry.kind === "circle"
+                          ? ([a.geometry.center.lat, a.geometry.center.lng] as unknown as LatLngExpression)
+                          : (() => {
+                              const pts = a.geometry.latlngs;
+                              if (!pts || pts.length === 0) return null;
+                              const sum = pts.reduce(
+                                (acc, p) => ({ lat: acc.lat + p.lat, lng: acc.lng + p.lng }),
+                                { lat: 0, lng: 0 }
+                              );
+                              return [sum.lat / pts.length, sum.lng / pts.length] as unknown as LatLngExpression;
+                            })();
+
+                      if (!center) return null;
+
+                      const labelText = [
+                        a.name,
+                        a.usertext ? a.usertext : null,
+                        `${a.limits.lower} - ${a.limits.upper}`,
+                      ]
+                        .filter(Boolean)
+                        .join("\n");
+
+                      // Create a divIcon per label. We keep it simple and avoid global Leaflet dependency here.
+                      // eslint-disable-next-line @typescript-eslint/no-require-imports
+                      const L = require("leaflet") as typeof import("leaflet");
+
+                      const icon = L.divIcon({
+                        className: "airspace-area-center-label",
+                        html: `<div class="airspace-area-center-label-text" style="color: ${color.stroke}; white-space: pre-line;">${
+                          // basic escaping for HTML
+                          labelText
+                            .replace(/&/g, "&amp;")
+                            .replace(/</g, "&lt;")
+                            .replace(/>/g, "&gt;")
+                        }</div>`,
+                        // Anchor at the marker position; CSS will shift the element so it's centered.
+                        iconAnchor: [0, 0],
+                      });
+
+                      return (
+                        <Marker
+                          key={`center-label-${a.id}-${dataVersion}`}
+                          position={center}
+                          icon={icon}
+                          interactive={false}
+                          keyboard={false}
+                        />
+                      );
+                    })
+                    .filter(Boolean)
+                : null}
             </MapContainer>
           </div>
         </div>
