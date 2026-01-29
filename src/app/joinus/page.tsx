@@ -98,6 +98,14 @@ export default function JoinUsPage() {
                                     </li>
                                     <li>
                                         <p>
+                                            Exceptional candidates may be admitted on a discretionary basis.
+                                        </p>
+                                        <p>
+                                            能力与条件优秀者可破格录取。
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
                                             By applying to join vPLAAF, you acknowledge that you have read, understood, and agree to the vPLAAF Privacy Policy.
                                         </p>
                                         <p>
