@@ -17,7 +17,7 @@ export default function HomePage() {
             {/* 背景图片层 */}
             <div
                 className="absolute inset-0 z-0 bg-cover bg-center"
-                style={{ backgroundImage: "url('/imgs/bg.jpg')" }}
+                style={{ backgroundImage: "url('/imgs/mainbg.jpg')" }}
             >
 
                 {/* 模糊遮罩 */}
@@ -26,7 +26,7 @@ export default function HomePage() {
 
             {/* 背景图右版权 */}
             <div className=" pointer-events-auto fixed right-3 bottom-3 z-30 rounded-md bg-slate-900/40 px-2 py-1 text-[10px] text-slate-300 backdrop-blur-sm border border-slate-700/50">
-                <a href="https://commons.wikimedia.org/wiki/File:Two_J-20s_at_CCAS2022_(20220827103238).jpg">Image: N509FZ</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via Wikimedia Commons
+                Image: Xinrui Wan, <a href="https://creativecommons.org/licenses/by-sa/4.0">© vPLAAF</a>
             </div>
 
             <div className="relative z-20">
