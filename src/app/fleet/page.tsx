@@ -330,6 +330,35 @@ export default function FleetPage() {
                                     </div>
                                 </div>
 
+                                {/*  */}
+                                <div className="flex flex-col sm:flex-row rounded-lg border border-slate-700/70 bg-slate-900/70 p-4 gap-4">
+                                    <div className="sm:w-60 shrink-0">
+                                        <img
+                                            src="/imgs/fleet/crj.png"
+                                            className="w-full h-full rounded-md border border-slate-700/60 bg-slate-950/80 object-cover aspect-[16/9]"
+                                        />
+                                    </div>
+                                    <div className="flex-1">
+                                        <h3 className="text-xl font-semibold tracking-wide text-sky-300">
+                                            CRJ-200 / CRJ-700
+                                        </h3>
+                                        <p className="text-xs text-slate-400 mb-1">
+                                            Business Jet · 公务机 <br />
+                                            Transport Aircraft · 运输机
+                                        </p>
+                                        <dl className="mt-1 space-y-1 text-sm sm:text-sm text-slate-300">
+                                            <div className="flex gap-2">
+                                                <dt className="w-20 shrink-0 text-slate-400">Platforms</dt>
+                                                <dd>MSFS / X-Plane</dd>
+                                            </div>
+                                            <div className="flex gap-2">
+                                                <dt className="w-20 shrink-0 text-slate-400">VATSIM</dt>
+                                                <dd>Type Code: CRJ2 / CRJ7</dd>
+                                            </div>
+                                        </dl>
+                                    </div>
+                                </div>
+
 
                             </div>
                         </div>
