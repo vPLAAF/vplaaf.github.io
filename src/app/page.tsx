@@ -8,7 +8,7 @@ import {Button} from "@/components/ui/button";
 import type { Metadata } from "next";
 export const metadata: Metadata = {
     title: "vPLAAF | 虚拟中国空军",
-    description: "虚拟中国空军官网",
+    description: "VATSIM VSOA 虚拟中国空军官网，vPLAAF 与现实中的中国人民解放军空军、任何国家机关、军事单位或商业机构不存在任何形式的隶属、从属、合作或授权关系，所有任务编制与设定均为虚构，不代表任何现实军事单位、组织或立场。",
 };
 
 export default function HomePage() {
