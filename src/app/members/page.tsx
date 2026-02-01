@@ -13,7 +13,7 @@ const MEMBERS_MD_URL =
 
 export default async function MembersPage() {
     const res = await fetch(MEMBERS_MD_URL, {
-        next: { revalidate: 3600 },
+        next: { revalidate: 1800 },
     });
 
     if (!res.ok) {
