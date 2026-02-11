@@ -344,31 +344,23 @@ export default function AirspaceMapClient() {
                         .filter(Boolean)
                         .join("\n");
 
-                      // Create a divIcon per label. We keep it simple and avoid global Leaflet dependency here.
-                      // eslint-disable-next-line @typescript-eslint/no-require-imports
-                      const L = require("leaflet") as typeof import("leaflet");
-
-                      const icon = L.divIcon({
-                        className: "airspace-area-center-label",
-                        html: `<div class="airspace-area-center-label-text" style="color: ${color.stroke}; white-space: pre-line;">${
-                          // basic escaping for HTML
-                          labelText
-                            .replace(/&/g, "&amp;")
-                            .replace(/</g, "&lt;")
-                            .replace(/>/g, "&gt;")
-                        }</div>`,
-                        // Anchor at the marker position; CSS will shift the element so it's centered.
-                        iconAnchor: [0, 0],
-                      });
-
+                      // Render the center label as a permanent Tooltip inside a Marker.
+                      // This is more robust than divIcon sizing and lets Leaflet handle placement.
                       return (
                         <Marker
                           key={`center-label-${a.id}-${dataVersion}`}
                           position={center}
-                          icon={icon}
                           interactive={false}
                           keyboard={false}
-                        />
+                        >
+                          <Tooltip permanent direction="center" offset={[0, 0]} className="airspace-area-center-label" opacity={1}>
+                            <div className="airspace-area-center-label-text" style={{ color: color.stroke, whiteSpace: "pre-line" }}>
+                              {labelText.split("\n").map((line, i) => (
+                                <div key={i}>{line}</div>
+                              ))}
+                            </div>
+                          </Tooltip>
+                        </Marker>
                       );
                     })
                     .filter(Boolean)
