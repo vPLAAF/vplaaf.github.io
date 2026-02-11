@@ -88,31 +88,12 @@ color: rgba(128, 128, 128, 0.75);
 .airspace-map .airspace-area-center-label {
   background: transparent !important;
   border: none !important;
-
-  /* Leaflet may apply default icon sizing/whitespace; neutralize it */
-  width: 0 !important;
-  height: 0 !important;
-  margin: 0 !important;
-  padding: 0 !important;
-
-  position: relative;
 }
 
 .airspace-map .airspace-area-center-label-text {
   pointer-events: none;
   user-select: none;
   text-align: center;
-
-  /*真正居中到 marker 点上*/
-  position: absolute;
-  left: 0;
-  top: 0;
-  transform: translate(-50%, -50%);
-
-  /* Give it a sane width so it doesn't collapse into a vertical column */
-  display: inline-block;
-  min-width: 160px;
-  max-width: 260px;
 
   font-size: 11px;
   line-height: 1.2;
@@ -123,7 +104,6 @@ color: rgba(128, 128, 128, 0.75);
     0 1px 2px rgba(0, 0, 0, 0.85),
     0 0 6px rgba(0, 0, 0, 0.45);
 
+  /* Don't let it wrap super narrow */
   white-space: pre-line;
-  overflow-wrap: normal;
-  word-break: keep-all;
 }

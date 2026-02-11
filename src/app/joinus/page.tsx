@@ -14,7 +14,7 @@ export default function JoinUsPage() {
             {/* 背景图片层 */}
             <div
                 className="absolute inset-0 z-0 bg-cover bg-center"
-                style={{ backgroundImage: "url('/imgs/bg.png')" }}
+                style={{ backgroundImage: "url('/imgs/bg.jpg')" }}
             >
                 <div className="absolute inset-0 bg-slate-950/40 backdrop-blur-sm pointer-events-none" />
             </div>

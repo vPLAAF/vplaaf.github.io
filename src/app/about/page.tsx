@@ -1,6 +1,5 @@
 import MainHeader from "@/components/layout/MainHeader";
 import MainFooter from "@/components/layout/MainFooter";
-import Link from "next/link";
 import type { Metadata } from "next";
 export const metadata: Metadata = {
     title: "关于我们 | About us",
@@ -61,8 +60,9 @@ export default function AboutPage() {
                         <h2 className="text-3xl mt-5 font-bold mb-5 text-center tracking-wide text-sky-300">
                             Organization &amp; Staff | 组织架构与职员
                         </h2>
+
+                        {/* 组织架构容器 */}
                         <div className="mt-4 rounded-xl border border-slate-800 bg-slate-900/80 p-4">
-                            {/* 组织架构 */}
                             <div className="pt-4 space-y-6">
 
                                 {/* 司令部 */}
@@ -262,10 +262,33 @@ export default function AboutPage() {
 
                                 </div>
 
+                            </div>
+                        </div>
 
+                        <h2 className="text-3xl mt-8 font-bold mb-5 text-center tracking-wide text-sky-300">
+                            Partners | 合作伙伴
+                        </h2>
+                        <div className="mt-4 rounded-xl border border-slate-800 bg-slate-900/80 p-4">
+                            <div className="pt-4">
+                                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-4 items-center">
+                                    <div className="">
+                                        <a href="https://www.vatprc.net/zh-cn/" target="_blank" rel="noreferrer" className="flex items-center justify-center p-3 bg-slate-900/0 rounded w-full flex-col text-center">
+                                            <img src="/imgs/partners/vatprc.png" alt="VATPRC" className="h-16 sm:h-20 md:h-24 object-contain" />
+                                            <span className="mt-2 text-xs sm:text-sm text-slate-300">VATSIM 中国分部<br/><span className="text-[11px] text-slate-400">VATPRC</span></span>
+                                        </a>
+                                    </div>
+
+                                    <div className="flex flex-col items-center text-center p-2">
+                                        <a href="https://mzt.app/" target="_blank" rel="noreferrer" className="flex items-center justify-center p-3 bg-slate-900/0 rounded w-full flex-col text-center">
+                                            <img src="/imgs/partners/mzt.png" alt="Zhongtai Virtual" className="h-32 sm:h-20 md:h-24 object-contain" />
+                                            <span className="mt-2 text-xs sm:text-sm text-slate-300">虚拟中太<br/> <span className="text-[11px] text-slate-400">Zhongtai Virtual</span></span>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
+                    </div>
                 </main>
 
                 <MainFooter />
