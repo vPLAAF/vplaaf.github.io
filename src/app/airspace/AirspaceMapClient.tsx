@@ -18,6 +18,7 @@ import {
   type AirspaceAreasResponse,
 } from "@/lib/airspace";
 import { loadBoundaries, type BoundaryFeature } from "@/lib/boundaries";
+import { bestInteriorPoint } from "@/lib/labelPlacement";
 
 const DATA_URL = "https://airspace.vplaaf.org/Areas.json";
 
@@ -327,11 +328,15 @@ export default function AirspaceMapClient() {
                           : (() => {
                               const pts = a.geometry.latlngs;
                               if (!pts || pts.length === 0) return null;
-                              const sum = pts.reduce(
-                                (acc, p) => ({ lat: acc.lat + p.lat, lng: acc.lng + p.lng }),
-                                { lat: 0, lng: 0 }
-                              );
-                              return [sum.lat / pts.length, sum.lng / pts.length] as unknown as LatLngExpression;
+
+                              // Prefer an interior point so the label stays within the polygon,
+                              // especially for concave/small restricted areas.
+                              const p = bestInteriorPoint(pts, {
+                                // Keep this fast; precision adapts to bbox size.
+                                maxIterations: 10,
+                              });
+                              if (!p) return null;
+                              return [p.lat, p.lng] as unknown as LatLngExpression;
                             })();
 
                       if (!center) return null;
@@ -350,14 +355,14 @@ export default function AirspaceMapClient() {
 
                       const icon = L.divIcon({
                         className: "airspace-area-center-label",
-                        html: `<div class="airspace-area-center-label-text" style="color: ${color.stroke}; white-space: pre-line;">${
+                        html: `<div class="airspace-area-center-label-inner"><div class="airspace-area-center-label-text" style="color: ${color.stroke}; white-space: pre-line;">${
                           // basic escaping for HTML
                           labelText
                             .replace(/&/g, "&amp;")
                             .replace(/</g, "&lt;")
                             .replace(/>/g, "&gt;")
-                        }</div>`,
-                        // Anchor at the marker position; CSS will shift the element so it's centered.
+                        }</div></div>`,
+                        // Anchor at the marker position; CSS will shift the inner element so it's centered.
                         iconAnchor: [0, 0],
                       });
 
