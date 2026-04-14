@@ -183,7 +183,7 @@ export default function JoinUsPage() {
                                             Apply via Email | 邮件申请
                                         </Button>
                                     </a>
-                                    <a href="https://discord.gg/BAqJVuuWxv">
+                                    <a href="https://discord.gg/XV4TFfvzD4">
                                         <Button
                                             className="
                                                 rounded-lg
