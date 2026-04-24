@@ -279,9 +279,9 @@ export default function AboutPage() {
                                     </div>
 
                                     <div className="flex flex-col items-center text-center p-2">
-                                        <a href="https://mzt.app/" target="_blank" rel="noreferrer" className="flex items-center justify-center p-3 bg-slate-900/0 rounded w-full flex-col text-center">
-                                            <img src="/imgs/partners/mzt.png" alt="Zhongtai Virtual" className="h-32 sm:h-20 md:h-24 object-contain" />
-                                            <span className="mt-2 text-xs sm:text-sm text-slate-300">虚拟中太<br/> <span className="text-[11px] text-slate-400">Zhongtai Virtual</span></span>
+                                        <a href="https://airchinavirtual.org/" target="_blank" rel="noreferrer" className="flex items-center justify-center p-3 bg-slate-900/0 rounded w-full flex-col text-center">
+                                            <img src="/imgs/partners/airchinavirtual.png" alt="Zhongtai Virtual" className="h-32 sm:h-20 md:h-24 object-contain" />
+                                            <span className="mt-2 text-xs sm:text-sm text-slate-300">虚拟中国国际航空公司<br/> <span className="text-[11px] text-slate-400">Air China Virtual</span></span>
                                         </a>
                                     </div>
                                 </div>
